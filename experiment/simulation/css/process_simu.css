@@ -1,0 +1,483 @@
+/* This HTML page and script files are developed by
+    Piyali Chattopadhyay
+    Project Scientist-Technical,
+    Virtual Labs IIT Kharagpur.*/
+
+
+.img-container {
+    display: inline-block;
+    position: relative;
+}
+
+#frequency-knob-container-fng {
+    border: 1px dotted red;
+    margin-bottom: 20px;
+    width: 50%;
+    height: 100%;
+    padding: 5px;
+    /*background-color: orange;*/
+    text-align: center;
+    cursor:pointer;
+}
+#amplitude-knob-container-fng {
+    border: 1px dotted red;
+    margin-bottom: 20px;
+    width: 50%;
+    height: 100%;
+    padding: 5px;
+    /*background-color: orange;*/
+    text-align: center;
+    cursor:pointer;
+}
+
+#mon{
+position: absolute;
+    width: 3%;
+    height: 4%;
+    top: 20.4%;
+    left: 42%;	
+}
+
+#pon{
+position: absolute;
+    width: 3%;
+    height: 4%;
+    top: 20.8%;
+    left: 52.2%;
+}
+
+#rr{
+    position: absolute;
+    width: 3%;
+    height: 4%;
+    top: 80.4%;
+    left: 53%;
+}
+#rr2{
+        position: absolute;
+    width: 3%;
+    height: 4%;
+    top: 35.4%;
+    left: 27%;
+}
+#li1{
+    position: absolute;
+    width: 3%;
+    height: 4%;
+    top: 12.4%;
+    left: 62%;
+}
+#li2{
+    position: absolute;
+    width: 3%;
+    height: 4%;
+    top: 12.4%;
+    left: 77.4%;
+}
+
+#dial{
+    position: absolute;
+    width: 14%;
+    height: 11%;
+    top: 33%;
+    left: 12%;
+}
+
+#circle1{
+    position: relative;
+    width: 63%;
+    height: 63%;
+    top: -68.6%;
+    left: 15.4%;
+}
+
+#circle2{
+    position: relative;
+    width: 63%;
+    height: 63%;
+    top: -68.6%;
+    left: 15.4%;
+}
+
+#circle3{
+    position: relative;
+    width: 63%;
+    height: 63%;
+    top: -68.6%;
+    left: 15.4%;
+}
+
+#circle4{
+    position: relative;
+    width: 63%;
+    height: 63%;
+    top: -68.6%;
+    left: 15.4%;
+}
+
+#circle5{
+    position: relative;
+    width: 63%;
+    height: 63%;
+    top: -68.6%;
+    left: 15.4%;
+}
+
+table, th, td {
+  border: 1px solid black;
+  /*border-collapse: collapse;*/
+}
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}  
+tr:nth-child(odd) {
+  background-color: #F0FBCC;
+} 
+
+
+ #bd1{
+    position: absolute;
+    left: 4.5%;
+    bottom: 93.7%;
+    padding: 4px;
+    
+  }
+   #bd2{
+    position: absolute;
+    left: 9%;
+    bottom: 85.5%;
+    padding: 4px;
+	
+  }
+  #bd3{
+    position: absolute;
+    left: 12.2%;
+    bottom: 85.7%;
+    padding: 4px;
+}
+	
+  
+   #bd4{
+    position: absolute;
+    left: 24.3%;
+    bottom: 84.8%;
+    padding: 4px;
+	
+  }
+   #bd5{
+    position: absolute;
+    left: 28%;
+    bottom: 85%;
+    padding: 4px;
+	
+  }
+
+ #bd6{
+    position: absolute;
+    left: 39%;
+    bottom: 85.3%;
+    padding: 4px;
+    
+ }
+
+#bd7{
+   position: absolute;
+    left: 42.8%;
+    bottom: 85.7%;
+    padding: 4px;
+    
+  }
+   #bd8{
+    position: absolute;
+    left: 53.8%;
+    bottom: 85.8%;
+    padding: 4px;
+	
+  }
+  #bd9{
+    position: absolute;
+    left: 57.6%;
+    bottom: 85.6%;
+    padding: 4px;
+}
+	
+  
+   #bd10{
+    position: absolute;
+    left: 68.6%;
+    bottom: 84.8%;
+    padding: 4px;
+	
+  }
+   #bd11{
+    position: absolute;
+    left: 72.4%;
+    bottom: 85%;
+    padding: 4px;
+	
+  }
+
+ #bd12{
+    position: absolute;
+    left: 83.6%;
+    bottom: 85%;
+    padding: 4px;
+    
+}
+ 
+ #bd13{
+    position: absolute;
+    left: 87.2%;
+    bottom: 84.9%;
+    padding: 4px;
+    
+  }
+  
+   #bd14{
+    position: absolute;
+    left: 93%;
+    bottom: 93.2%;
+    padding: 4px;
+	
+  }
+  #bd15{
+    position: absolute;
+    left: 57.5%;
+    bottom: 68.4%;
+    padding: 4px;
+}
+	
+  
+   #bd16{
+    position: absolute;
+    left: 57.4%;
+    bottom: 61.3%;
+    padding: 4px;
+	
+  }
+   #bd17{
+    position: absolute;
+    left: 57.5%;
+    bottom: 54%;
+    padding: 4px;
+	
+  }
+
+ #bd18{
+    position: absolute;
+    left: 68.8%;
+    bottom: 68.5%;
+    padding: 4px;
+    
+ }
+
+#bd19{
+    position: absolute;
+    left: 68.8%;
+    bottom: 61.5%;
+    padding: 4px;
+    
+  }
+   #bd20{
+    position: absolute;
+    left: 68.8%;
+    bottom: 54.2%;
+    padding: 4px;
+	
+  }
+  #bd21{
+    position: absolute;
+    left: 5.6%;
+    bottom: 44%;
+    padding: 4px;
+}
+	
+  
+   #bd22{
+   position: absolute;
+    left: 5.6%;
+    bottom: 36.8%;
+    padding: 4px;
+	
+  }
+   #bd23{
+    position: absolute;
+    left: 5.6%;
+    bottom: 29.7%;
+    padding: 4px;
+	
+  }
+
+ #bd24{
+    position: absolute;
+    left: 5.6%;
+    bottom: 22.6%;
+    padding: 4px;
+   
+ }
+
+#bd25{
+    position: absolute;
+    left: 5.6%;
+    bottom: 15.7%;
+    padding: 4px;
+   
+  }
+   #bd26{
+    position: absolute;
+    left: 5.6%;
+    bottom: 8%;
+    padding: 4px;
+	
+  }
+  #bd27{
+    position: absolute;
+    left: 20.4%;
+    bottom: 31.4%;
+    padding: 4px;
+}
+	
+  
+   #bd28{
+    position: absolute;
+    left: 29.1%;
+    bottom: 31.5%;
+    padding: 4px;
+	
+  }
+   #bd29{
+    position: absolute;
+    left: 34%;
+    bottom: 31.4%;
+    padding: 4px;
+	
+  }
+
+ #bd30{
+    position: absolute;
+    left: 49.5%;
+    bottom: 44%;
+    padding: 4px;
+    
+ }
+
+#bd31{
+   position: absolute;
+    left: 54.9%;
+    bottom: 44%;
+    padding: 4px;
+    
+ }
+
+#bd32{
+   position: absolute;
+    left: 49.5%;
+    bottom: 38%;
+    padding: 4px;
+    
+ }
+
+
+#bd33{
+   position: absolute;
+    left: 49.5%;
+    bottom: 31.8%;
+    padding: 4px;
+    
+ }
+
+
+#bd34{
+  position: absolute;
+    left: 49.7%;
+    bottom: 25%;
+    padding: 4px;
+    
+ }
+
+#bd35{
+   position: absolute;
+    left: 54.9%;
+    bottom: 37.8%;
+    padding: 4px;
+    
+ }
+
+#bd36{
+   position: absolute;
+    left: 54.9%;
+    bottom: 31.8%;
+    padding: 4px;
+    
+ }
+ 
+ #bd37{
+   position: absolute;
+    left: 75.7%;
+    bottom: 38.7%;
+    padding: 4px;
+    
+ }
+ 
+#bd38{
+  position: absolute;
+    left: 79.9%;
+    bottom: 38.7%;
+    padding: 4px;
+    
+ } 
+ 
+ #bd39{
+   position: absolute;
+    left: 93.3%;
+    bottom: 45.6%;
+    padding: 4px;
+    
+ }
+ 
+ #bd40{
+   position: absolute;
+    left: 93.3%;
+    bottom: 38.6%;
+    padding: 4px;
+}
+    
+ 
+ 
+ #bd41{
+   position: absolute;
+    left: 92.8%;
+    bottom: 9.3%;
+    padding: 4px;
+}
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
