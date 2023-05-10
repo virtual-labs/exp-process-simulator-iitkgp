@@ -48,8 +48,8 @@ Meter Indicator: two center-zero meters indicate the set value (lower meter) and
 						
 <b style="color:blue">Proportional Control System Response</b>
 						
-Refer to Fig 1 the jumper E to H is connected to apply proportional control.At point A a square wave signal of amplitude 5V p-p and frequency about 0.05Hz is Injected into the system.Alternatively the SET VALUE DISTURBANCE from point X and the negative MEASURED VALUE from the point B are displayed on an oscilloscope ,
-with both PROCESS and CONTROLLER switches at FAST, and input signal frequency 1.0Hz.
+Refer to Fig 1 the jumper E to H is connected to apply proportional control.At point A a square wave signal of amplitude 5V p-p and frequency about 0.2 Hz is Injected into the system.Alternatively the SET VALUE DISTURBANCE from point X and the negative MEASURED VALUE from the point B are displayed on an oscilloscope ,
+with both PROCESS and CONTROLLER switches at FAST.
 						
 The meter switched to DEVIATION or display from point C and changes in DEVIATION are noted as disturbances are applied.Final setting points of both MEASURED VALUE and DEVIATION are noted.Tests with a percentage PROPORTIONAL BAND set at 50 and then 5 are done. 
 						
