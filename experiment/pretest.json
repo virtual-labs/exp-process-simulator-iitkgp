@@ -2,37 +2,82 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the main objective of process control?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": " to control physical parameters ",
+        "b": "to control mechanical parameters",
+        "c": "to control optical parameters",
+        "d": "to control electrical parameters"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What is a process control system?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": " system to keep the parameters at zero value",
+        "b": "system to maintain the parameters constant",
+        "c": "system to keep the parameters at highest value",
+        "d": "system to check the voltage"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Physical parameters change due to ________",
+      "answers": {
+        "a": "Voltage",
+        "b": "Current",
+        "c": " internal and external disturbances",
+        "d": "Power"
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "For proper feedback in a process control element, it is required to ________",
+      "answers": {
+        "a": "measure P",
+        "b": "measure set point",
+        "c": "measure error",
+        "d": "measure comparator"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "A temperature control system is known as",
+      "answers": {
+        "a": "Process Control System",
+        "b": "Servomechanism",
+        "c": "Cascade control system",
+        "d": "None of these"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "The term hysteresis is associated with",
+      "answers": {
+        "a": "ON-OFF control",
+        "b": "P-control",
+        "c": "PI-control",
+        "d": "PID-control"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },	
+	
+	
+	{
+      "question": "The frequency at which maximum amplitude ratio is attained is called the __________ frequency.",
+      "answers": {
+        "a": "Corner",
+        "b": "Resonant",
+        "c": "Cross-over",
+        "d": "Natural"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
