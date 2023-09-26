@@ -1,0 +1,108 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. The transfer function of a process is 1/(16s^2 + 8s + 4). If a step change is introduced into the system, then the response will be",
+      "answers": {
+        "a": "Under damped",
+        "b": "Critically damped",
+        "c": "Over damped",
+        "d": "None of these"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. The time constant of a first order process with resistance R and capacitance C is",
+      "answers": {
+        "a": "RC",
+        "b": "R+C",
+        "c": "R-C",
+        "d": "1/RC"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. For the time domain function f(t) = t, the Laplace transform of &#8747;<sub >0</sub><sup >t</sup>(f(t))dt is given by",
+      "answers": {
+        "a": "1/2s^3",
+        "b": "2/s^3",
+        "c": "1/s^3",
+        "d": "2/s^2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which of the following are the not characteristics of the closed loop systems?",
+      "answers": {
+        "a": "It does not compensate for disturbance",
+        "b": "It reduces the sensitivity of plant-parameter variations",
+        "c": " It does not involve output measurements",
+        "d": " It does not has the ability to control the system transient response"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. What is the relationship between the steady-state error, gain and the tendency of oscillations when the controller is supposed to be under the proportional action?",
+      "answers": {
+        "a": "Steady-state error increases with an increase in gain and oscillation tendency",
+        "b": "Steady-state error decreases with the decrease in gain and oscillation tendency",
+		"c": "Steady-state error decreases with an increase in gain and oscillation tendency",
+        "d": "Steady-state error increases with the decrease in gain and oscillation tendency"
+        
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. The input to a controller is",
+      "answers": {
+        "a": "Sensed Signal",
+        "b": "Error Signal",
+        "c": "Desired variable value",
+        "d": "Signal of fixed amplitude not dependent on desired variable value"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. In a PID controller, the overshoots has increased. The derivative time constant has to be __ so as to reduce the overshoots:",
+      "answers": {
+        "a": " Increased",
+        "b": "Reduced",
+        "c": "Reduced to Zero",
+        "d": "None of the above"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "8. Proportional band of the controller is expressed as:",
+      "answers": {
+        "a": "Gain",
+        "b": "Ratio",
+        "c": "Percentage",
+        "d": "Range of control variables"
+        
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }, 
+    
+	
+	{
+      "question": "9. In which one of the following controllers, the response is fast?",
+      "answers": {
+        "a": "PI",
+        "b": "PID",
+        "c": "Both a and b",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}

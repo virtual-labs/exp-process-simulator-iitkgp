@@ -1,0 +1,76 @@
+/* This script file is edited by
+    Piyali Chattopadhyay
+    Project Scientist-Technical,
+    Virtual Labs IIT Kharagpur.*/
+
+.demo {
+    /* for IE10+ touch devices */
+    touch-action:none;
+}
+/** JSPLUMB ARTEFACTS **/
+.jtk-overlay {
+    z-index: 51;
+}
+
+.jtk-endpoint {
+    z-index: 50;
+    cursor: move;
+}
+
+.jtk-connector {
+    z-index: 1;
+}
+/*.jtk-demo-canvas {    
+    
+        /*margin-left: 0;
+        margin-top:10px;
+		margin:0 auto;
+        height:auto;
+    
+	
+}*/
+
+/** ELEMENTS **/
+.bigdot {
+    cursor: pointer;
+    width: 162px;
+    height: 162px;
+  /* background-image: url(bigdot.png);*/
+    z-index: 5;
+    position: absolute;
+    border-radius: 81px;
+}
+
+.bigdot-hover {
+    border: 2px solid orange;
+}
+
+.dropHover {
+    border: 1px solid orange;
+}
+
+/** ELEMENT POSITIONS **/
+/*#bd1 {
+	position: absolute;
+    top: -5em;
+    left: 15em;
+}
+
+#ld2 {
+    top: 3em;
+    left: 3em;
+}
+
+#ld3 {
+    top: 19em;
+    left: 4.5em;
+}
+
+#ld4 {
+    top: 19em;
+    left: 46em;
+}*/
+
+path, .jtk-endpoint {
+    cursor: pointer;
+}
