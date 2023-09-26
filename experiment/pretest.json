@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What is the main objective of process control?",
+      "question": "1. What is the main objective of process control?",
       "answers": {
         "a": " to control physical parameters ",
         "b": "to control mechanical parameters",
@@ -13,7 +13,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "What is a process control system?",
+      "question": "2. What is a process control system?",
       "answers": {
         "a": " system to keep the parameters at zero value",
         "b": "system to maintain the parameters constant",
@@ -24,7 +24,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Physical parameters change due to ________",
+      "question": "3. Physical parameters change due to ________",
       "answers": {
         "a": "Voltage",
         "b": "Current",
@@ -35,7 +35,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "For proper feedback in a process control element, it is required to ________",
+      "question": "4. For proper feedback in a process control element, it is required to ________",
       "answers": {
         "a": "measure P",
         "b": "measure set point",
@@ -46,7 +46,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "A temperature control system is known as",
+      "question": "5. A temperature control system is known as",
       "answers": {
         "a": "Process Control System",
         "b": "Servomechanism",
@@ -57,7 +57,7 @@
       "difficulty": "beginner"
     },
 	{
-      "question": "The term hysteresis is associated with",
+      "question": "6. The term hysteresis is associated with",
       "answers": {
         "a": "ON-OFF control",
         "b": "P-control",
@@ -70,7 +70,7 @@
 	
 	
 	{
-      "question": "The frequency at which maximum amplitude ratio is attained is called the __________ frequency.",
+      "question": "7. The frequency at which maximum amplitude ratio is attained is called the __________ frequency.",
       "answers": {
         "a": "Corner",
         "b": "Resonant",
