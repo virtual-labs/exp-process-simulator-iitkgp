@@ -9,11 +9,11 @@
 }
 /** JSPLUMB ARTEFACTS **/
 .jtk-overlay {
-    z-index: 51;
+    z-index: 4;
 }
 
 .jtk-endpoint {
-    z-index: 50;
+    z-index: 3;
     cursor: move;
 }
 

@@ -30,6 +30,47 @@
     cursor:pointer;
 }
 
+#splant{
+position: absolute;
+    width: 100%;
+    height: 35%;
+    top: -6.6%;
+    left: 0%;
+    z-index: -1;	
+}
+
+#splant2{
+position: absolute;
+    width: 44%;
+    height: 35%;
+    top: -6.6%;
+    left: 65%;
+    z-index: -1;	
+}
+#splant3{
+position: absolute;
+    width: 44%;
+    height: 90%;
+    top: 9.4%;
+    left: 65%;
+    z-index: -2;
+}
+
+#led{
+position: absolute;
+    width: 4%;
+    height: 4%;
+    top: -4.6%;
+    left: 45%;
+}
+
+#sw{
+position: absolute;
+    width: 6%;
+    height: 12%;
+    top: -13.6%;
+    left: 34%;
+}
 #mon{
 position: absolute;
     width: 3%;
@@ -81,6 +122,20 @@ position: absolute;
     height: 11%;
     top: 33%;
     left: 12%;
+}
+#pointer1{
+    position: absolute;
+    width: 5%;
+    /* height: 11%; */
+    top: 37%;
+    left: 16.5%;
+}
+#pointer2{
+    position: absolute;
+    width: 5%;
+    /* height: 11%; */
+    top: 34%;
+    left: 16.5%;
 }
 
 #circle1{
