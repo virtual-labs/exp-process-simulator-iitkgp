@@ -1,82 +1,82 @@
 # Theory
 
- The Process Control Simulator is a special-purpose analogue simulator employing integrated circuit operational amplifiers.
-				
+The process control simulator is a special purpose analogue simulator employing integrated circuit operational amplifiers.<br/><br>
+
 <div align="center">
-<img class="img-fluid"  src="./images/connection_diagram.png" alt="">    
-</div>
+<img class="img-fluid " id="theoimg" src="./images/conn.png" alt="" ><br>
+<b>Fig. 1. Connection diagram for the Process Control Simulator</b>
+</div><br>
 
-<b style="color:blue">The Simulated Process</b>
-				
-The process comprises the following elements, any of which may be inserted or omitted from a complete process by the use of jumper leads. 
-				
-1 Simple lag of time constant 10 milliseconds or 1s
+<b >The Simulated Process</b><br>
 
-2 lags of time constant 10millseconds or 1s (each convertible by toggle switches to integrators of time constant 10 ms or 1s)
+The process consists of following elements, each of which can be included or excluded from the entire process using jumper leads. <br/>
 
-1 distance- velocity lag of delay 10 milliseconds or 1 second, selected by a toggle switch 
+i) 1 Simple lag of time constant 10 milliseconds or 1s.<br/>
+ii) 2 Lags of time constant 10 millseconds or 1 sec (each convertible by toggle switches to integrators of time constant 10 ms or 1 sec).<br/>
+iii) 1 Distance-velocity lag of delay 10 milliseconds or 1 second, selected by a toggle switch. <br/>
+iv) 1 Inverter <br/>
 
-1 inverter 
+The time constants of all the above elements can be set by one toggle switch to slow (1 s) or fast (10 ms) mode.<br/><br/>
 
-The time constants of all the above elements can be set by one toggle switch to slow (1s) or fast (10ms) mode.
-With these elements any of twelve different linear process characteristics of Type 0, 1 and 2 may be established.Every element produces a polarity inversion but the inverter may be included or not as necessary to produce the desired overall polarity.
-						
-<b style="color:blue">The Simulated Controller</b>
+<b >The Simulated Controller</b><br>
 
-The controller is of the PID type which generates a control signal of the type 
-						
-$$u = k_p[e(t)+ \frac{1}{T_i}\int_{0}^{t}e(\tau)d\tau + \dot{e}(t)]$$
+The controller is of the PID type which generates a control signal <br>
 
-The Controller comprises the following elements:
+$$u = k_p \ [ e(t)+ \frac{1}{T_i}\int_{0}^{t}e(\tau)d\tau + T_d \ \dot{e}(t) ]$$
 
-1 Set-value control of range &plusmn; 10 volts
-
-1 Comparing element 
-
-1 Integral action control scaled in integral action time T<sub>i</sub>
-
-1 Derivative action control scaled in derivative action time T<sub>d</sub>
-
-1 Proportional band control scaled in % proportional band PB = 100/K<sub>p</sub>
+The controller comprises the following elements :<br> 
+1 Set-value control of range &plusmn; 10 volts<br>
+1 Comparing element <br>
+1 Integral action control scaled in integral action time <i style="font-family:'Bodoni MT'">T<sub>i</sub></i><br>
+1 Derivative action control scaled in derivative action time <i style="font-family:'Bodoni MT'">T<sub>d</sub></i><br>
+1 Proportional band control scaled in &percnt; proportional band PB = 100/<i style="font-family:'Bodoni MT';font-size:20px">k<sub>p</sub></i><br><br>
 
 The comparing element generates the deviation as the difference between the controlled condition and
-the set value and passes it to the three–term controller comprising the integral, derivatives, and proportional controls.To avoid problems due to integrator drift an OFF position is provided on the integral action control in which the integral term at held at zero.
+the set value, then passes it to the three–term controller comprising the integral, derivative, and proportional controls.
+<br/><br/>
+<b>Meter Indicator :</b> Two center-zero meters indicate the set value (lower meter) and either of the measured value or the deviation (upper meter) according to
+the switch position selected. The sense of the meters is arranged to ensure correct polarities according to the equation<br>
 
-Meter Indicator: two center-zero meters indicate the set value (lower meter) and either the measured value or the deviation (upper meter} according to the switch position selected. The sense of the meters is arranged to ensure correct polarities according to the equation
-						
-<b>Deviation = Measured Value - Set Value</b>
-						
-<b style="color:blue">Proportional Control System Response</b>
-						
-Refer to Fig 1 the jumper E to H is connected to apply proportional control.At point A a square wave signal of amplitude 5V p-p and frequency about 0.2 Hz is Injected into the system.Alternatively the SET VALUE DISTURBANCE from point X and the negative MEASURED VALUE from the point B are displayed on an oscilloscope ,
-with both PROCESS and CONTROLLER switches at FAST.
-						
-The meter switched to DEVIATION or display from point C and changes in DEVIATION are noted as disturbances are applied.Final setting points of both MEASURED VALUE and DEVIATION are noted.Tests with a percentage PROPORTIONAL BAND set at 50 and then 5 are done. 
-						
-<b>Summary:</b>
+<b>Deviation = Measured value - Set value</b><br><br>
 
-The system moves slowly towards the SET VALUE. When it has there exists a considerable DEVIATION. As the percentage PROPORTIONAL BAND is reduced, i.e,the gain of the system is increased, the steady state DEVIATION is reduced and the system settles with its MEASURED VALUE much closer to the SET VALUE.In order to reduce the steady state DEVIATION to zero, however, the gain must be increased to such a value that the system becomes completely unstable.A compromise gain level must be used which maintains, a steady state deviation signal.
-						
-The system response is shown below.
-						
+<b >Proportional Control System Response</b><br/>
+
+Refer to Fig. 1 the points <span style="font-family:'Times New Roman'">E</span> to <span style="font-family:'Times New Roman'">H</span> is connected through a jumper wire to apply proportional control. At point A a square wave signal of amplitude 5 V p-p and frequency about 0.2 Hz is injected into the system. 
+<!-- Alternatively the set value disturbance from point X and the negative measured value from the point B are displayed on an oscilloscope ,
+with both process and controller switches at fast. -->
+
+The measured value and deviation can be observed from points <span style="font-family:'Times New Roman'">B</span> and <span style="font-family:'Times New Roman'">C</span> respectively. It is observed that the system moves slowly towards the set value. As the percentage proportional band is reduced, i.e,
+the gain of the system is increased, the steady state deviation is reduced and the system settles with its measured value much closer to the set value.
+In order to reduce the steady state deviation to zero, however, the gain must be increased to such a value that the system becomes completely unstable.
+<!--A compromise gain level must be used which maintains a steady state deviation signal.--><br>
+
+The system response is shown in Fig. 2.<br><br>
+
 <div align="center">
-<img src="./images/pr.png" alt="" style="width:50%;height:40%">					  
-</div>
-						
-<b style="color:blue">Proportional Plus Integral Control:</b> 
+<img src="./images/pr.png" alt="" class="img-fluid"><br/>
+<b> Fig. 2. Proportional Control System Response</b>
+</div><br/><br/>
 
-The jumper D to G is connected for integral action.A square wave of 5V p-p or 1.0 Hz is applied to the SET VALUE DISTURBANCE socket X . The proportional band control is adjusted to 50 and it is adjusted until the system settles with about four overshoots only after each disturbance.Continuous oscillation should commence at a value of about 12.DEVIATION socket C is monitored and the setting on INTEGRAL ACTION control is slowly reduced until DEVIATION falls to zero after each disturbance.The number of overshoots before it settles are noted.The output of the integrator socket D when the system has settled is noted.The difference between MEASURED and SET VALUE is noted. The INTEGRAL ACTION control is reduced to 10 and the responses of system is noted.
+<b >Proportional plus Integral Control (PI) :</b><br> 
 
-<b>Summary:</b> By suitable adjustment of the integrator time constant the steady state DEVIATION can be reduced to zero. In consequence the MEASURED VALUE becomes much closer to SET VALUE.Too much integral term however causes the system to go into oscillation. Generally speaking an increase in the integral term reduces steady state deviation but increases the time the system takes to settle. 
+The points <span style="font-family:'Times New Roman'">D</span> to <span style="font-family:'Times New Roman'">G</span> is connected through a jumper wire for integral action. A square wave of 5 V p-p and 0.2 Hz is applied to the set value disturbance socket <span style="font-family:'Times New Roman'">X</span> . 
+The proportional band control is adjusted to 50. Deviation socket C is monitored.
+The difference between measured and set value is noted. The responses of system is noted for different settings of integral action control.
 
-<b style="color:blue">Proportional + Integral+ Derivative Control:</b> 
+By suitable adjustment of the integrator time constant, the steady state deviation can be reduced to zero. In consequence, the measured value becomes much closer to set value.
+Too much integral term however causes the system to go into oscillation. Generally an increase in the integral term reduces steady state deviation but increases the time, the system takes to settle. 
 
-Derivative Control: As was seen, integral control improves the performance of the control system in some respects, i.e., reduces steady state DEVIATION, but has the disadvantage of slowing down the overall response time.If a system was required to follow a sudden change in SET VALUE this would give rise to rapid change in the DEVIATION. Although this deviation change is rapid the system responds rather slowly, so if at this time controller output could be boosted ,the speed of system response could be improved. If the deviation was differentiated i.e. its rate of change measured, and a signal produced proportional to this and then added to the signals from the proportional and integrator sections, some improvement should result.
-						
-All switches and controls as in Fig l are set,the jumper for all the control actions are connected.A square wave input of 5V p-p or 1.0Hz is applied to the SET VALUE DISTERBANCE socket .INTEGRAL ACTION is adjusted until steady state deviation is zero. After a disturbance the steady state deviation and number of overshoots are noted before the system settles.The DERIVATIVE ACTION control is slowly increased and the effect this has upon the system response is noted. If this has any effect upon this steady state DEVIATION is also checked.
+<br><br><b >Proportional plus Integral plus Derivative Control (PID) :</b><br> 
 
-<b>Summary:</b> Application of the DERIVATIVE TERM does not have any effect upon the steady state deviation but does reduce the settling time by reducing the number of oscillation.
+Integral control improves the performance of the control system in some respects, i.e., reduces steady state deviation but has the disadvantage of slowing down the overall response time.
+If a system is required to follow a sudden change in set value, this would give rise to a rapid change in the deviation. Although this deviation change is rapid,
+the system responds rather slowly. If at this time controller output can be boosted, the speed of system response can be improved. If the deviation is differentiated 
+i.e. its rate of change is measured and a signal is produced proportional to this, then added to the signals from the proportional and integrator sections, some improvement should result.
+The points <span style="font-family:'Times New Roman'">F</span> to <span style="font-family:'Times New Roman'">I</span> is connected for derivative action.
 
-						
+All switches and controls as in Fig. 1 are set, the points for all the control actions (Proportional (<span style="font-family:'Times New Roman'">E-H</span>), Integral (<span style="font-family:'Times New Roman'">D-G</span>), Derivative (<span style="font-family:'Times New Roman'">F-I</span>)) are connected. A square wave input of 5 V p-p and 0.2 Hz is applied to the set value disturbance socket .
+The derivative action control is slowly increased and the effect of this upon the system response is noted. 
+Application of the derivative term does not have any effect upon the steady state deviation but reduces the settling time by reducing the number of oscillations.
+
 						
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>								

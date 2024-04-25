@@ -6,14 +6,14 @@
 <!DOCTYPE html>
 <html lang="en"><!--html tag start-->
 <head>
-    <title>Study and operation of the Process Simulator set up</title>
+    <title>Study and operation of the Process Simulator setup</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="./css/adik.css" rel="stylesheet">
+  <!--<link href="./css/adik.css" rel="stylesheet">-->
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
@@ -21,14 +21,14 @@
   
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script  src="./js/process_simu.js">   </script>
+  <script  src="./js/process_simu_updated.js"></script>
   
   
 	
  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.js"></script>
   <script src=" https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.min.js  "></script>
- 
+ <script src="https://unpkg.com/mathjs/lib/browser/math.js"></script>
  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
@@ -37,11 +37,11 @@
 
 <link rel="stylesheet" href="./css/process_simu.css">
 <link rel="stylesheet" href="./css/demo.css">
-<link rel="stylesheet" href="./css/piyuk.css">
+
 
 
   <style>
-	.bluedot{
+	<!-- .bluedot{
 	position:absolute;
     border: 2px solid blue;
     border-radius:50%;
@@ -69,9 +69,35 @@
 	background-size:cover;
 	background-position:center;
 	
-	}
+	} -->
 	
 	
+.animknob {
+position: absolute;
+cursor:pointer;
+    border: 2px solid #212221;
+    border-radius: 50%;
+    background-color: #040605;
+    background-image: linear-gradient(90deg, #8c958d, #d7e9da);
+    box-shadow: 5px 5px 8px #D9DBDB;
+}
+
+.knobhandle {
+	
+position:absolute;
+cursor:pointer;
+background-color: black;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow:  0 0 20px #fff, 0 0 30px #0867DF;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #023474;
+  }
+}	
 	
 	
 	
@@ -110,84 +136,97 @@
         
     </div><!--First Container under body tag end-->
     
-    
 	
-    <div class="container p-3 my-5 text-left border"><!--3rd Container under body tag start-->
+    <div class="container p-3 my-5 text-left border" ><!--3rd Container under body tag start-->
       <div class="row"><!--First row under 3rd container start-->
         <div class="col-md-1"></div><!--First col under 3rd container start& end-->
         <div class="col-md-10"><!--2nd col under 3rd container start-->
             <p class="text-center bg-success"> <a class="nav-link" data-bs-toggle="tab"  id="instcontrol" style="background-color:#128BD9"  ><span class=" h3 text-dark"> Instructions </span></a>
-              <ol id="inst" style="display:block;height:200px;overflow-y:auto;">
-					
-					<span style="color:blue">P-Control</span>
-                      <li>At first connect the circuit diagram properly through the connecting dots(blue dots)in the Process Simulator kit below the oscilloscope section,according to below instruction.
-					  2-7,8-9,10-11,12-13,21-22,23-24,37-38,39-40,28-29,25-26,23-42,44-42,46-43,46-25 and 32-35 for proportional control.45-22,45-27 connections can be done for showing output signal
-					   or deviation signal respectively in oscilloscope channel-2 alternatively.</li></br>
+              <div id="inst" style="display:block;height:200px;overflow-y:auto;text-align:justify">
+					<ol>
+					<b>P Control</b>
+                      <li>First make the wire connection properly through the connecting dots (blue dots) in the process simulator kit, below the oscilloscope section following the below instructions.<br/><br/>
+					  2-7, 8-9, 10-11, 12-13, 21-22, 23-24, 37-38, 39-40, 28-29, 25-26, 23-42, 44-42, 46-43, 46-25 and 32-35 for proportional control. 
+					  45-22, 45-27 connections can be done for showing output signal or deviation signal respectively in oscilloscope channel-2 alternatively.<br/>
+					   
+					   Switch on the plant by clicking on the toggle switch above it. The led will glow.</li></br>
   
-					  <li>Click on 'Check Connection' button to check whether the connection is proper or not.Then click on the 'Power' button to switch on the oscilloscope.</li><br/>
+					  <li>Click on 'Check Connection' button to check whether the connection is proper or not.
+					  Click on the 'Power' button to switch on the oscilloscope.</li><br/>
 					 
-					 <li>Click on "Square" button(twice) to observe input signal. Apply amplitude to 5v<sub>p-p</sub>,Frequency 0.2Hz. </li></br>
+					 <li>Click on "Square" button (twice) to observe input signal. Apply amplitude to 5 V<sub>p-p</sub>, frequency 0.2 Hz. </li></br>
 					 
-					 <li>Apply 50 percent proportional band by rotating the 'proportional band' knob by clicking on the plus sign on it. </li><br/>
+					 <li>Apply 50 percent proportional band by rotating the 'proportional band' knob. </li><br/>
 
-					 <li>Now click on 'Output' button to observe the output signal and enlarged signal plot for that particular proportional band.Channel-1 will show the input,
-					 Channel-2 will show the output and 'Dual' shows the both.In the plot below zoom in the overshoot part of the
-					 curve by selecting that part. Enter the peak value and steady state value in respective input boxes.Click on
-					 'Calculate' button.Observe the Steady state Error,Percentage Overshoot.Now delete connection 45-22 by clicking on the connection and connect 45-27,
-					 click on 'Check Connection' button to check whether the connection is proper or not. Now follow above 
-					 steps to observe the deviation signal. </li><br/>
+					 <li>Now click on 'Output' button to observe the output signal and enlarged signal plot for the particular proportional band.
+					 Channel-1 will show the input, Channel-2 will show the output and 'Dual' shows both the input and output signals. 
+					 In the plot (at the bottom of the page) zoom in the overshoot part of the curve by selecting that part. Enter the peak value and steady state value in respective input boxes. Click on
+					 'Calculate' button. Observe the steady state error and percentage overshoot. Click on 'Clear' button. Power off the oscilloscope.</li><br/>					 
+					 
+					 <li>Delete connection 45-22 by clicking on the connected wire and connect 45-27, click on 'Check Connection' button to check whether the connection is proper or not. 
+					 Power on the oscilloscope. Now follow steps 3-5 to observe the deviation signal. </li><br/>
 					 
 					 
-					 <li>Click on 'Clear' button each time after one observation.Check output and deviation for 30,200,5 percent proportional band in same way.</li><br/>
+					 <li>Click on 'Clear' button each time after one observation. Check output and deviation for 30,200,5 percent proportional band 
+					 following steps 1-6. Power off the oscilloscope.</li><br/>
 					 
 					<br><br>
-					 
-					<span style="color:blue">P-I Control</span>
-                      <li>At first connect the circuit diagram properly through the connecting dots(blue dots)in the Process Simulator kit below the oscilloscope section,according to below instruction.
-					  2-7,8-9,10-11,12-13,21-22,23-24,37-38,39-40,28-29,25-26,23-42,44-42,46-43,46-25 and 32-35,30-31 for proportional Integral control.45-22,45-27 connections can be done for showing output signal
-					   or deviation signal respectively in oscilloscope channel-2 alternatively.</li></br>
+					 </ol>
+					 <ol>
+					<b>PI Control</b>
+                      <li>First make the wire connection properly through the connecting dots (blue dots) in the process simulator kit, below the oscilloscope section following the below instructions.<br/><br/>
+					  
+					  2-7, 8-9, 10-11, 12-13, 21-22, 23-24, 37-38, 39-40, 28-29, 25-26, 23-42, 44-42, 46-43, 46-25 and 32-35, 30-31 for proportional integral control. 
+					  45-22, 45-27 connections can be done for showing output signal or deviation signal respectively in oscilloscope channel-2 alternatively.</li></br>
   
-					  <li>Click on 'Check Connection' button to check whether the connection is proper or not.Then click on the 'Power' button to switch on the oscilloscope.</li><br/>
+					  <li>Click on 'Check Connection' button to check whether the connection is proper or not. Click on the 'Power' button to switch on the oscilloscope.</li><br/>
 					 
-					 <li>Click on "Square" button(twice) to observe input signal. Apply amplitude to 5v<sub>p-p</sub>,Frequency 1Hz. </li></br>
+					 <li>Click on "Square" button (twice) to observe input signal. Apply amplitude to 5 V<sub>p-p</sub>, frequency 0.2 Hz. </li></br>
 					 
-					 <li>Apply 50 percent proportional band by rotating the 'proportional band' knob(this is fixed value) and apply integral time 2 by rotating the 'integral action' knob by clicking on the plus sign on it . </li><br/>
+					 <li>Apply 100 percent proportional band by rotating the 'proportional band' knob (this will be fixed) and apply integral time 2 by rotating the 'integral action' knob. </li><br/>
 
-					 <li>Now click on 'Output' button to observe the output signal and the enlarged signal plot for that particular integral time.Channel-1 will show the input,
-					 Channel-2 will show the output and 'Dual' shows the both.In the plot below zoom in the overshoot part of the
-					 curve by selecting that part. Enter the peak value and steady state value(if overshoots are there) in respective input boxes.Click on
-					 'Calculate' button.Observe the Steady state Error,Percentage Overshoot.Now delete connection 45-22 by clicking on the connection and connect 45-27,
-					 click on 'Check Connection' button to check whether the connection is proper or not. Now follow above 
-					 steps to observe the deviation signal. </li><br/>
+					 <li>Now click on 'Output' button to observe the output signal and the enlarged signal plot for the particular integral time. Channel-1 will show the input,
+					 Channel-2 will show the output and 'Dual' shows both the input and output signals. 
+					 In the plot (at the bottom of the page) zoom in the overshoot part of the curve by selecting that part. Enter the peak value and steady state value (if overshoots are there) in respective input boxes. Click on
+					 'Calculate' button. Observe the steady state error and percentage overshoot. Click on 'Clear' button. Power off the oscilloscope.</li><br/>					 
 					 
+					 <li>Delete connection 45-22 by clicking on the connected wire and connect 45-27, click on 'Check Connection' button to check whether the connection is proper or not. 
+					 Power on the oscilloscope. Now follow steps 3-5 to observe the deviation signal. </li><br/>
 					 
-					 <li>Click on 'Clear' button each time after one observation.Check output and deviation by setting integral time to 5,10,25 in same way.</li><br/>
+					 <li>Click on 'Clear' button each time after one observation. Check output and deviation by setting integral time to 5,10,25 following steps 1-6. Power off the oscilloscope.</li><br/>
 					
 					<br><br>
-					 
-					<span style="color:blue">P-I-D Control</span>
-                      <li>At first connect the circuit diagram properly through the connecting dots(blue dots)in the Process Simulator kit below the oscilloscope section,according to below instruction.
-					  2-7,8-9,10-11,12-13,21-22,23-24,37-38,39-40,28-29,25-26,23-42,44-42,46-43,46-25 and 32-35,30-31,33-36 for proportional Integral Derivative control.45-22,45-27 connections can be done for showing output signal
-					   or deviation signal respectively in oscilloscope channel-2 alternatively.</li></br>
+					</ol>
+					<ol>					
+					<b>PID Control</b>
+                      <li>First make the wire connection properly through the connecting dots (blue dots) in the process simulator kit below the oscilloscope section following the below instructions.<br/><br/>
+					  
+					  2-7, 8-9, 10-11, 12-13, 21-22, 23-24, 37-38, 39-40, 28-29, 25-26, 23-42, 44-42, 46-43, 46-25 and 32-35, 30-31, 33-36 for proportional integral derivative control. 45-22, 45-27 connections can be done for showing output signal
+					   or deviation signal respectively in oscilloscope channel-2 alternatively.
+					   </li></br>
   
-					  <li>Click on 'Check Connection' button to check whether the connection is proper or not.Then click on the 'Power' button to switch on the oscilloscope.</li><br/>
+					  <li>Click on 'Check Connection' button to check whether the connection is proper or not. Click on the 'Power' button to switch on the oscilloscope.</li><br/>
 					 
-					 <li>Click on "Square" button(twice) to observe input signal. Apply amplitude to 5v<sub>p-p</sub>,Frequency 1Hz. </li></br>
+					 <li>Click on "Square" button (twice) to observe input signal. Apply amplitude to 5 V<sub>p-p</sub>, frequency 0.2 Hz. </li></br>
 					 
-					 <li>Apply 50 percent proportional band by rotating the 'proportional band' knob(this is fixed value) and apply integral time 2 by rotating the 'integral action' knob(this is fixed value) ,apply derivative time to 2 by rotating the 'Derivative action' knob by clicking on the plus sign on it. </li><br/>
+					 <li>Apply 50 percent proportional band by rotating the 'proportional band' knob (this will be fixed) and apply integral time 2 by rotating the 'integral action' knob (this will be fixed) , apply derivative time to 2 by rotating the 'derivative action' knob. </li><br/>
 
-					 <li>Now click on 'Output' button to observe the output signal and the enlarged signal plot for that particular derivative time.Channel-1 will show the input,
-					 Channel-2 will show the output and 'Dual' shows the both.In the plot below zoom in the overshoot part of the
-					 curve by selecting that part. Enter the peak value and steady state value(if overshoots are there) in respective input boxes.Click on
-					 'Calculate' button.Observe the Steady state Error,Percentage Overshoot.Check the steady state error,percentage overshoot are decreased in the output after P-I-D Control.
-					 Now delete connection 45-22 by clicking on the connection and connect 45-27,
-					 Click on 'Check Connection' button to check whether the connection is proper or not. Now follow above 
-					 steps to observe the deviation signal.</li><br/>
-						
-
+					 <li>Now click on 'Output' button to observe the output signal and the enlarged signal plot for the particular derivative time.
+					 Channel-1 will show the input, Channel-2 will show the output and 'Dual' shows both the input and output signals. 
+					 In the plot (at the bottom of the page) zoom in the overshoot part of the curve by selecting that part. Enter the peak value and steady state value (if overshoots are there) in respective input boxes. Click on
+					 'Calculate' button. Observe the steady state error and percentage overshoot. Click on 'Clear' button. Power off the oscilloscope.</li><br/>					 
+					 
+					 <li>Delete connection 45-22 by clicking on the connected wire and connect 45-27, click on 'Check Connection' button to check whether the connection is proper or not. 
+					 Power on the oscilloscope. Now follow steps 3-5 to observe the deviation signal. </li><br/>
+					
+					<li>Click on 'Clear' button each time after one observation. Check output and deviation by setting derivative time to 1 following steps 1-6. Power off the oscilloscope and the plant.</li><br/>
+					
+					<br><br>
+					
+					</ol>
 
 					
-		   </ol>
+		   </div>
             </p> 
           </div><!--2nd col under 3rd container end-->
 		  
@@ -212,7 +251,7 @@
 
 				<div style="width:100%;border:2px dotted #22B2E8">
 				
-				 <button type="button" id="onff" onclick="mainswt()" value="off" class="btn btn-danger " disabled=disabled>Power</button>
+				 <button type="button" id="onff" onclick="mainswt()" value="off" class="btn btn-danger" disabled=disabled>Power</button>
 				
 				<!--<button type="button" id="sin" onclick="drawsine()"  class="btn btn-success " >Sine</button>-->
 				<button type="button" id="sqr" onclick="drawsqr()"  class="btn btn-primary "disabled=disabled >Square</button>
@@ -233,19 +272,19 @@
 		
 		
 		<br/><br/>
-				<span style="float:right;text-align:center">Steady-state Error</span>
+				<span style="float:right;text-align:center">&nbsp; Steady-state Error (V)</span>
 				<input type="number" id="sserr" value="0" style="float:right;text-align:center"readOnly=readOnly><br/>
 				
 				<br/>
-				<span style="float:right;text-align:center">Enter Peak Value</span>
+				<span style="float:right;text-align:center">&nbsp; Enter Peak Value (V)</span>
 				<input type="number" id="pv" value="0" style="float:right;text-align:center"><br/>
 				
 				<br/>
-				<span style="float:right;text-align:center">Enter Steady State Value</span>
+				<span style="float:right;text-align:center">&nbsp; Enter Steady State Value (V)</span>
 				<input type="number" id="sv" value="0" style="float:right;text-align:center"><br/>
 				
 				<br/>
-				<span style="float:right;text-align:center">Percentage Overshoot</span>
+				<span style="float:right;text-align:center">&nbsp; &percnt; Overshoot</span>
 				<input type="number" id="ov" value="0" style="float:right;text-align:center"readOnly=readOnly><br/>
 				
 				
@@ -272,13 +311,13 @@
 							<div class="p-4 " >
                                 <input type="number" id="fq-knob-fng"  value="0.2" readOnly="false" oninput="freqfng()">
 								<br/>
-                                <label>Frequency(Hz)</label>                            
+                                <label>Frequency (Hz)</label>                            
 							</div>
 							
 							<div class="p-4 " >
                                 <input type="number" id="amp-knob-fng" readOnly="false"  value="3" oninput="ampfng()">
 								<br/>
-                                <label>Amplitude(Volt)</label>
+                                <label>Amplitude (Volt)</label>
 							</div>
 							</div>
 							
@@ -387,6 +426,12 @@
 		
 	</div>
 
+<div class="row my-5 gy-2"><!--- 1st row under fourth container start--->
+		
+			
+        
+			<div class="col-md-12" ><!--1st col under 1st row start -->
+			</div></div>
 	
 		<div class="row my-5 gy-2"><!--- 1st row under fourth container start--->
 		
@@ -394,7 +439,32 @@
         
 			<div class="col-md-12" ><!--1st col under 1st row start -->
 				  <!-- Code Start here--> 
+				  
 				<div class="img-container"><!--img container div start-->
+				
+				<img class="img-fluid " id="plant" src="./images/Plant.png" />	
+				<img class="img-fluid " id="splant" src="./images/pseudo.png " />
+					<img class="img-fluid " id="splant2" src="./images/pseudo.png " />
+					<img class="img-fluid " id="splant3" src="./images/pseudo.png " />
+					<img class="img-fluid " id="led" src="./images/ledoff.png " />
+					<img class="img-fluid " id="sw" onclick="led()" src="./images/side_off.png " />
+					
+					<img class="img-fluid " id="mon" onclick="motoron()" src="./images/off.png " />
+					<img class="img-fluid " id="pon" onclick="planton()" src="./images/off.png " />
+					<img class="img-fluid " id="rr" onclick="rron()" src="./images/off.png " />
+					<img class="img-fluid " id="rr2" onclick="rr2on()" src="./images/off.png " />
+					<img class="img-fluid " id="li1" onclick="li1on()" src="./images/off.png " />
+					<img class="img-fluid " id="li2" onclick="li2on()" src="./images/off.png " />
+					<img class="img-fluid " id="dial"  src="./images/dial.png " />
+					<img class="img-fluid " id="pointer1"  src="./images/pointer.png " />
+					<img class="img-fluid " id="pointer2"  src="./images/pointer.png " />
+					
+					<div id="knob1" class="animknob"  style=" width:9%;height:13%;top:54%;left:65%;pointer-events:none;">
+					<div class="knobhandle" style="width:20%;height:5%;top:85%;left:20%;transform:rotate(304deg)"></div>				
+					</div>
+					<input type="number" id="P" min="0" value="0" max="200" step="5" style="position:absolute;width:6%;height:3%;top:59%;left:67%;text-align:center; background: transparent;font-size: small;border:none"readOnly=readOnly>
+					
+				
 				
 					<div id="bd1"></div> 
 					<div id="bd2"></div>
@@ -437,72 +507,86 @@
 					<div id="bd39"></div>
 					<div id="bd40"></div>
 					<div id="bd41"></div>
-				
-					<img class="img-fluid " id="plant" src="./images/Plant.png" />					
 					
-					<img class="img-fluid " id="mon" onclick="motoron()" src="./images/off.png " />
-					<img class="img-fluid " id="pon" onclick="planton()" src="./images/off.png " />
-					<img class="img-fluid " id="rr" onclick="rron()" src="./images/off.png " />
-					<img class="img-fluid " id="rr2" onclick="rr2on()" src="./images/off.png " />
-					<img class="img-fluid " id="li1" onclick="li1on()" src="./images/off.png " />
-					<img class="img-fluid " id="li2" onclick="li2on()" src="./images/off.png " />
-					<img class="img-fluid " id="dial"  src="./images/dial.png " />
+					
+				
+					
 				
 				<!---knob 1 1st col 1st row--------->
-		<div class="bluedot" id="knob1" style=" width:8%;height:12%;top:54%;left:65%;pointer-events:none;">
+		<!-- <div class="bluedot" id="knob1" style=" width:9%;height:13%;top:54%;left:65%;pointer-events:none;">
 		<div class="handlep" id="knob1p" onclick="rotate1()"style="width:30%;height:30%;top:33%;left:0%;"></div>
 		<div class="handlen" id="knob1n"onclick="rotate2()" style="width:30%;height:30%;top:33%;left:70%;"></div>
-		<input type="number" id="P" min="5" value="5" max="200" style="position:absolute;width:75%;height:30%;top:70%;left:22%;text-align:center; background: transparent;border:none"readOnly=readOnly>
-		</div>
+		</div> -->
 		
 		<!---knob 2 1st col 1st row--------->
-		<div class="bluedot" id="knob2" style=" width:8%;height:12%;top:49%;left:38.8%;pointer-events:none;">
+		<!-- <div class="bluedot" id="knob2" style=" width:9%;height:13%;top:49%;left:37.8%;pointer-events:none;">
 		<div class="handlep" id="knob2p" onclick="rotate3()"style="width:30%;height:30%;top:33%;left:0%;"></div>
 		<div class="handlen" id="knob2n"onclick="rotate4()" style="width:30%;height:30%;top:33%;left:70%;"></div>
-		<input type="number" id="I" min="2" value="2" max="25"  style="position:absolute;width:75%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none"readOnly=readOnly>
+		</div> -->
+		<div id="knob2" class="animknob"   style="width:9%;height:13%;top:49%;left:37.8%;pointer-events:none;">
+		<div class="knobhandle" style="width:20%;height:5%;top:85%;left:20%;transform:rotate(304deg)"></div>				
 		</div>
+		<input type="number" id="I" min="0" value="0" max="25" step="1" style="position:absolute;width:5%;height:3%;top:55%;left:40.5%;text-align:center; background: transparent;font-size: small;border:none"readOnly=readOnly>
 		
 		<!---knob 3 1st col 1st row--------->
-		<div class="bluedot" id="knob3" style=" width:8%;height:12%;top:62%;left:39%;pointer-events:none;">
+		<!-- <div class="bluedot" id="knob3" style=" width:9%;height:13%;top:63%;left:38.5%;pointer-events:none;">
 		<div class="handlep" id="knob3p" onclick="rotate5()"style="width:30%;height:30%;top:33%;left:0%;"></div>
 		<div class="handlen" id="knob3n"onclick="rotate6()" style="width:30%;height:30%;top:33%;left:70%;"></div>
-		<input type="number" id="D" min="0" value="0" max="2" step="1" style="position:absolute;width:50%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none"readOnly=readOnly>
-		</div>	
+		</div> -->	
+		<div id="knob3" class="animknob"   style=" width:9%;height:13%;top:63%;left:38.5%;pointer-events:none;">
+		<div class="knobhandle" style="width:20%;height:5%;top:85%;left:20%;transform:rotate(304deg)"></div>				
+		</div>
+		<input type="number" id="D" min="0" value="0" max="2" step="1" style="position:absolute;width:5%;height:3%;top:68%;left:41%;text-align:center;z-index:1; background: transparent;font-size: small;border:none"readOnly=readOnly>
 				
 		<!---knob 4 1st col 1st row--------->
-		<div class="bluedot" id="knob4" style=" width:8%;height:12%;top:77%;left:40%;pointer-events:none;">
+		<!-- <div class="bluedot" id="knob4" style=" width:9%;height:13%;top:77%;left:40%;pointer-events:none;">
 		<div class="handlep" id="knob4p" onclick="rotate7()"style="width:30%;height:30%;top:33%;left:0%;"></div>
 		<div class="handlen" id="knob4n"onclick="rotate8()" style="width:30%;height:30%;top:33%;left:70%;"></div>
-		<input type="number" id="setvalue" min="0" value="0" max="1" step="0.1" style="position:absolute;width:50%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none">
+		</div> -->
+		<div id="knob4" class="animknob"   style="width:9%;height:13%;top:77%;left:40%;pointer-events:none;">
+		<div class="knobhandle" style="width:20%;height:5%;top:85%;left:20%;transform:rotate(304deg)"></div>				
 		</div>
+		<input type="number" id="setvalue" min="0" value="0" max="1" step="0.1" style="position:absolute;width:5%;height:3%;top:83%;left:42.5%;text-align:center; background: transparent;font-size: small;border:none"readOnly=readOnly>
 		
 		<!---knob 2 1st col 1st row--------->
-		<div class="bluedot" id="knob5" style=" width:8%;height:12%;top:76%;left:63.8%;pointer-events:none;">
+		<!-- <div class="bluedot" id="knob5" style=" width:9%;height:13%;top:75%;left:62.8%;pointer-events:none;">
 		<div class="handlep" id="knob5p" onclick="rotate9()"style="width:30%;height:30%;top:33%;left:0%;"></div>
 		<div class="handlen" id="knob5n"onclick="rotate10()" style="width:30%;height:30%;top:33%;left:70%;"></div>
-		<input type="number" id="limit" min="0" value="0" max="1" step="0.1" style="position:absolute;width:50%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none">
+		</div> -->
+		<div id="knob5" class="animknob"   style="width:9%;height:13%;top:75%;left:62.8%;pointer-events:none;">
+		<div class="knobhandle" style="width:20%;height:5%;top:85%;left:20%;transform:rotate(304deg)"></div>				
 		</div>
+		<input type="number" id="limit" min="0" value="0" max="1" step="0.1" style="position:absolute;width:5%;height:3%;top:82%;left:65.5%;text-align:center; background: transparent;font-size: small;border:none"readOnly=readOnly>
 		
 		<!---knob 3 1st col 1st row--------->
-		<div class="bluedot" id="knob6" style=" width:8%;height:12%;top:75%;left:72.6%;pointer-events:none;">
+		<!-- <div class="bluedot" id="knob6" style=" width:9%;height:13%;top:75%;left:72.6%;pointer-events:none;">
 		<div class="handlep" id="knob6p" onclick="rotate11()"style="width:30%;height:30%;top:33%;left:0%;"></div>
 		<div class="handlen" id="knob6n"onclick="rotate12()" style="width:30%;height:30%;top:33%;left:70%;"></div>
-		<input type="number" id="deadband" min="0" value="0" max="1" step="0.1" style="position:absolute;width:50%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none">
-		</div>			
+		</div>	 -->		
+		<div id="knob6" class="animknob"   style="width:9%;height:13%;top:75%;left:72.6%;pointer-events:none;">
+		<div class="knobhandle" style="width:20%;height:5%;top:85%;left:20%;transform:rotate(304deg)"></div>				
+		</div>
+		<input type="number" id="deadband" min="0" value="0" max="1" step="0.1" style="position:absolute;width:5%;height:3%;top:81%;left:75%;text-align:center; background: transparent;font-size: small;border:none"readOnly=readOnly>
 				
 		<!---knob 3 1st col 1st row--------->
-		<div class="bluedot" id="knob7" style=" width:8%;height:12%;top:75.4%;left:81.8%;pointer-events:none;">
+		<!-- <div class="bluedot" id="knob7" style=" width:9%;height:13%;top:74.4%;left:82.5%;pointer-events:none;">
 		<div class="handlep" id="knob7p" onclick="rotate13()"style="width:30%;height:30%;top:33%;left:0%;"></div>
 		<div class="handlen" id="knob7n"onclick="rotate14()" style="width:30%;height:30%;top:33%;left:70%;"></div>
-		<input type="number" id="overlap" min="0" value="0" max="1" step="0.1" style="position:absolute;width:50%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none">
-		</div>			
+		</div> -->	
+		<div id="knob7" class="animknob"   style="width:9%;height:13%;top:74.4%;left:82.5%;pointer-events:none;">
+		<div class="knobhandle" style="width:20%;height:5%;top:85%;left:20%;transform:rotate(304deg)"></div>				
+		</div>
+		<input type="number" id="overlap" min="0" value="0" max="1" step="0.1" style="position:absolute;width:5%;height:3%;top:81%;left:85%;text-align:center; background: transparent;font-size: small;border:none"readOnly=readOnly>
 				
 		<!---knob 3 1st col 1st row--------->
-		<div class="bluedot" id="knob8" style=" width:8%;height:12%;top:55%;left:82%;pointer-events:none;">
+		<!-- <div class="bluedot" id="knob8" style=" width:9%;height:13%;top:55%;left:82%;pointer-events:none;">
 		<div class="handlep" id="knob8p" onclick="rotate15()"style="width:30%;height:30%;top:33%;left:0%;"></div>
 		<div class="handlen" id="knob8n"onclick="rotate16()" style="width:30%;height:30%;top:33%;left:70%;"></div>
-		<input type="number" id="NL" min="0" value="0" max="1" step="0.1" style="position:absolute;width:50%;height:30%;top:60%;left:29%;text-align:center; background: transparent;border:none">
-		</div>			
+		</div> -->	
+		<div id="knob8" class="animknob"   style="width:9%;height:13%;top:55%;left:82%;pointer-events:none;">
+		<div class="knobhandle" style="width:20%;height:5%;top:85%;left:20%;transform:rotate(304deg)"></div>				
+		</div>
+		<input type="number" id="NL" min="0" value="0" max="1" step="0.1" style="position:absolute;width:5%;height:3%;top:61%;left:84.5%;text-align:center; background: transparent;font-size: small;border:none"readOnly=readOnly>
 				
 					
 		  
@@ -564,22 +648,273 @@
   
   <script src="./js/jsPlumb.js"></script>	
 	<script src="./js/demo.js"> </script> 
-	 <!--<script type="text/javascript" src="./js/knob.js"></script>
-    <script type="text/javascript" src="./js/ui.js"></script>
-    <script type="text/javascript" src="./js/ui.el.js"></script>
-    <script type="text/javascript" src="./js/p1.js"></script>
-	<script type="text/javascript" src="./js/piyuk.js"></script>
-	
-	<!--<svg>
-              <filter id="dropshadow" height="150%" width="150%">
-                  <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
-                  <feOffset dx="0" dy="3" result="offsetblur"/>
-                  <feMerge>
-                      <feMergeNode/>
-                      <feMergeNode in="SourceGraphic"/>
-                  </feMerge>
-              </filter>
-          </svg>-->
-	
+	 <script>
+
+var knobPositionX;
+      var knobPositionY;
+      var mouseX;
+      var mouseY;
+      var knobCenterX;
+      var knobCenterY;
+      var adjacentSide;
+      var oppositeSide;
+      var currentRadiansAngle;
+      var getRadiansInDegrees;
+      var finalAngleInDegrees;
+      var volumeSetting;
+      //var tickHighlightPosition;
+      //var audio = new Audio("https://www.cineblueone.com/maskWall/audio/skylar.mp3"); //Celine Dion's "Ashes"
+      //var startingTickAngle = -135;
+      //var tickContainer = document.getElementById("tickContainer");
+      var knob1 = document.getElementById("knob1");
+	  var knob2 = document.getElementById("knob2");
+	  var knob3 = document.getElementById("knob3");
+	  
+	   
+      var boundingRectangle1 = knob1.getBoundingClientRect(); //get rectangular geometric data of knob (x, y, width, height)
+	  var boundingRectangle2 = knob2.getBoundingClientRect();
+	  var boundingRectangle3 = knob3.getBoundingClientRect();
+	  
+
+      function main1()
+      {
+          knob1.addEventListener(getMouseDown(), onMouseDown1); //listen for mouse button click
+          document.addEventListener(getMouseUp(), onMouseUp1); //listen for mouse button release
+	  }
+	  function main2()
+      {
+          knob2.addEventListener(getMouseDown(), onMouseDown2); //listen for mouse button click
+          document.addEventListener(getMouseUp(), onMouseUp2); //listen for mouse button release
+	  }
+	  function main3()
+      {
+          knob3.addEventListener(getMouseDown(), onMouseDown3); //listen for mouse button click
+          document.addEventListener(getMouseUp(), onMouseUp3); //listen for mouse button release
+	  }
+	  
+
+      //on mouse buttons down
+      function onMouseDown1()
+      {
+	  document.addEventListener(getMouseMove(), onMouseMove1); //start drag
+      }	  
+	  function onMouseDown2()
+      {
+	  document.addEventListener(getMouseMove(), onMouseMove2); //start drag
+      }
+	  function onMouseDown3()
+      {
+	  document.addEventListener(getMouseMove(), onMouseMove3); //start drag
+      }
+	  
+      //on mouse buttons release
+      function onMouseUp1()
+      {
+          document.removeEventListener(getMouseMove(), onMouseMove1); //stop drag
+      }
+	  function onMouseUp2()
+      {
+          document.removeEventListener(getMouseMove(), onMouseMove2); //stop drag
+      }
+	  function onMouseUp3()
+      {
+          document.removeEventListener(getMouseMove(), onMouseMove3); //stop drag
+      }
+	 
+
+      //compute mouse angle relative to center of volume knob
+      //For clarification, see my basic trig explanation at:
+      //https://www.quora.com/What-is-the-significance-of-the-number-pi-to-the-universe/answer/Kevin-Lam-15
+      function onMouseMove1(event)
+      {	  
+          knobPositionX = boundingRectangle1.left; //get knob's global x position
+          knobPositionY = boundingRectangle1.top; //get knob's global y position
+
+          if(detectMobile() == "desktop")
+          {
+              mouseX = event.pageX; //get mouse's x global position
+              mouseY = event.pageY; //get mouse's y global position
+          } else {
+              mouseX = event.touches[0].pageX; //get finger's x global position
+              mouseY = event.touches[0].pageY; //get finger's y global position
+          }
+
+          knobCenterX = boundingRectangle1.width / 2 + knobPositionX; //get global horizontal center position of knob relative to mouse position
+          knobCenterY = boundingRectangle1.height / 2 + knobPositionY; //get global vertical center position of knob relative to mouse position
+
+          adjacentSide = knobCenterX - mouseX; //compute adjacent value of imaginary right angle triangle
+          oppositeSide = knobCenterY - mouseY; //compute opposite value of imaginary right angle triangle
+
+          //arc-tangent function returns circular angle in radians
+          //use atan2() instead of atan() because atan() returns only 180 degree max (PI radians) but atan2() returns four quadrant's 360 degree max (2PI radians)
+          currentRadiansAngle = Math.atan2(adjacentSide, oppositeSide);
+
+          getRadiansInDegrees = currentRadiansAngle * 180 / Math.PI; //convert radians into degrees
+
+          finalAngleInDegrees = -(getRadiansInDegrees - 135); //knob is already starting at -135 degrees due to visual design so 135 degrees needs to be subtracted to compensate for the angle offset, negative value represents clockwise direction
+
+          //only allow rotate if greater than zero degrees or lesser than 270 degrees
+          if(finalAngleInDegrees >= 0 && finalAngleInDegrees <= 300)
+          {
+              knob1.style.transform = "rotate(" + finalAngleInDegrees + "deg)"; //use dynamic CSS transform to rotate volume knob
+
+              //270 degrees maximum freedom of rotation / 100% volume = 1% of volume difference per 2.7 degrees of rotation
+              volumeSetting = Math.round(finalAngleInDegrees / (300 / 100));
+              var voltValue = volumeSetting * (200/100); 
+			  if(voltValue == 40){
+              document.getElementById("P").value = 5;//math.round(voltValue) ;//+ "%"; //update volume text
+			  }
+			  if(voltValue == 80){
+              document.getElementById("P").value = 30;//math.round(voltValue) ;//+ "%"; //update volume text
+			  }
+			  if(voltValue == 120){
+              document.getElementById("P").value = 50;//math.round(voltValue) ;//+ "%"; //update volume text
+			  }
+			  if(voltValue == 160){
+              document.getElementById("P").value = 100;//math.round(voltValue) ;//+ "%"; //update volume text
+			  }
+			  if(voltValue == 200){
+              document.getElementById("P").value = 200;//math.round(voltValue) ;//+ "%"; //update volume text
+			  }
+			  
+          }
+      }
+
+///knob2/////
+function onMouseMove2(event)
+      {
+          knobPositionX = boundingRectangle2.left; //get knob's global x position
+          knobPositionY = boundingRectangle2.top; //get knob's global y position
+
+          if(detectMobile() == "desktop")
+          {
+              mouseX = event.pageX; //get mouse's x global position
+              mouseY = event.pageY; //get mouse's y global position
+          } else {
+              mouseX = event.touches[0].pageX; //get finger's x global position
+              mouseY = event.touches[0].pageY; //get finger's y global position
+          }
+
+          knobCenterX = boundingRectangle2.width / 2 + knobPositionX; //get global horizontal center position of knob relative to mouse position
+          knobCenterY = boundingRectangle2.height / 2 + knobPositionY; //get global vertical center position of knob relative to mouse position
+
+          adjacentSide = knobCenterX - mouseX; //compute adjacent value of imaginary right angle triangle
+          oppositeSide = knobCenterY - mouseY; //compute opposite value of imaginary right angle triangle
+
+          //arc-tangent function returns circular angle in radians
+          //use atan2() instead of atan() because atan() returns only 180 degree max (PI radians) but atan2() returns four quadrant's 360 degree max (2PI radians)
+          currentRadiansAngle = Math.atan2(adjacentSide, oppositeSide);
+
+          getRadiansInDegrees = currentRadiansAngle * 180 / Math.PI; //convert radians into degrees
+
+          finalAngleInDegrees = -(getRadiansInDegrees - 135); //knob is already starting at -135 degrees due to visual design so 135 degrees needs to be subtracted to compensate for the angle offset, negative value represents clockwise direction
+
+          //only allow rotate if greater than zero degrees or lesser than 270 degrees
+          if(finalAngleInDegrees >= 0 && finalAngleInDegrees <= 300)
+          {
+              knob2.style.transform = "rotate(" + finalAngleInDegrees + "deg)"; //use dynamic CSS transform to rotate volume knob
+
+              //270 degrees maximum freedom of rotation / 100% volume = 1% of volume difference per 2.7 degrees of rotation
+              volumeSetting = Math.round(finalAngleInDegrees / (300 / 100));
+              var voltValue = volumeSetting * (25/100); 
+              document.getElementById("I").value = math.round(voltValue);//+ "%"; //update volume text
+              
+             // document.getElementById("volumeValue").innerHTML = volumeSetting + "%"; //update volume text
+          }
+      }
+	  
+	  ///knob3/////
+function onMouseMove3(event)
+      {
+          knobPositionX = boundingRectangle3.left; //get knob's global x position
+          knobPositionY = boundingRectangle3.top; //get knob's global y position
+
+          if(detectMobile() == "desktop")
+          {
+              mouseX = event.pageX; //get mouse's x global position
+              mouseY = event.pageY; //get mouse's y global position
+          } else {
+              mouseX = event.touches[0].pageX; //get finger's x global position
+              mouseY = event.touches[0].pageY; //get finger's y global position
+          }
+
+          knobCenterX = boundingRectangle3.width / 2 + knobPositionX; //get global horizontal center position of knob relative to mouse position
+          knobCenterY = boundingRectangle3.height / 2 + knobPositionY; //get global vertical center position of knob relative to mouse position
+
+          adjacentSide = knobCenterX - mouseX; //compute adjacent value of imaginary right angle triangle
+          oppositeSide = knobCenterY - mouseY; //compute opposite value of imaginary right angle triangle
+
+          //arc-tangent function returns circular angle in radians
+          //use atan2() instead of atan() because atan() returns only 180 degree max (PI radians) but atan2() returns four quadrant's 360 degree max (2PI radians)
+          currentRadiansAngle = Math.atan2(adjacentSide, oppositeSide);
+
+          getRadiansInDegrees = currentRadiansAngle * 180 / Math.PI; //convert radians into degrees
+
+          finalAngleInDegrees = -(getRadiansInDegrees - 135); //knob is already starting at -135 degrees due to visual design so 135 degrees needs to be subtracted to compensate for the angle offset, negative value represents clockwise direction
+
+          //only allow rotate if greater than zero degrees or lesser than 270 degrees
+          if(finalAngleInDegrees >= 0 && finalAngleInDegrees <= 300)
+          {
+              knob3.style.transform = "rotate(" + finalAngleInDegrees + "deg)"; //use dynamic CSS transform to rotate volume knob
+
+              //270 degrees maximum freedom of rotation / 100% volume = 1% of volume difference per 2.7 degrees of rotation
+              volumeSetting = Math.round(finalAngleInDegrees / (300 / 100));
+              var voltValue = volumeSetting * (2/100); 
+              document.getElementById("D").value = math.round(voltValue);//+ "%"; //update volume text
+              
+             // document.getElementById("volumeValue").innerHTML = volumeSetting + "%"; //update volume text
+          }
+      }
+	  
+	 
+    
+      //detect for mobile devices from https://www.sitepoint.com/navigator-useragent-mobiles-including-ipad/
+      function detectMobile()
+      {
+          var result = (navigator.userAgent.match(/(iphone)|(ipod)|(ipad)|(android)|(blackberry)|(windows phone)|(symbian)/i));
+
+          if(result !== null)
+          {
+              return "mobile";
+          } else {
+              return "desktop";
+          }
+      }
+
+      function getMouseDown()
+      {
+          if(detectMobile() == "desktop")
+          {
+              return "mousedown";
+          } else {
+              return "touchstart";
+          }
+      }
+
+      function getMouseUp()
+      {
+          if(detectMobile() == "desktop")
+          {
+              return "mouseup";
+          } else {
+              return "touchend";
+          }
+      }
+
+      function getMouseMove()
+      {
+          if(detectMobile() == "desktop")
+          {
+              return "mousemove";
+          } else {
+              return "touchmove";
+          }
+      }
+
+      main1();
+	  main2();
+	  main3();
+	 
+</script>	
 </body><!--body tag end-->
 </html><!--html tag end-->
