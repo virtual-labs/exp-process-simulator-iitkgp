@@ -3,7 +3,7 @@
 
 1) Farid Golnaraghi, Benjamin C. Kuo - Automatic Control Systems (2009, Wiley)
 
-2) Modern Control Engineering - K. Ogata, Prentice Hall of India Pvt. Ltd.
+2) Katsuhiko Ogata - Modern Control Engineering (2010, Prentice Hal)
 
 
 #### Video Lectures

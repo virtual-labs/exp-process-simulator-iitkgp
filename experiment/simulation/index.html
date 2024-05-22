@@ -21,8 +21,8 @@
   
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script  src="./js/process_simu_updated.js"></script>
-  
+  <!-- <script  src="./js/process_simu_updated.js"></script> -->
+  <script  src="./js/Psimulator.js"></script>
   
 	
  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -136,7 +136,7 @@ background-color: black;
         
     </div><!--First Container under body tag end-->
     
-	
+    	
     <div class="container p-3 my-5 text-left border" ><!--3rd Container under body tag start-->
       <div class="row"><!--First row under 3rd container start-->
         <div class="col-md-1"></div><!--First col under 3rd container start& end-->
@@ -368,7 +368,7 @@ background-color: black;
 				   <input type="text" id="amp-knob1" value="1" readOnly="false" oninput="amp1pdiv()">				   
                    <input type="text"  id="positiony1" value="0" readOnly="false"  oninput="posiy1chnge()"  style="cursor:pointer;">
 				<br/>
-				<label>Volt(V)/div</label>
+				<label>Volt (V)/div</label>
 				<br/>
 				<label id="positnlabely1">Position-Y</label>
 				<br/>
@@ -379,7 +379,7 @@ background-color: black;
 				   <input type="text" id="amp-knob2"  value="1" readOnly="false" oninput="amp2pdiv()">				   
     			   <input type="text"  id="positiony2" value="0" readOnly="false"  oninput="posiy2chnge()"  style="cursor:pointer;">
 				   <br/>
-				   <label>Volt(V)/div</label>
+				   <label>Volt (V)/div</label>
 				   <br/>
 				   <label id="positnlabely2">Position-Y</label>
 				   <br/>
@@ -389,12 +389,12 @@ background-color: black;
 				
 				<div class="d-inline-flex p-2"> 
 				<div class="p-4 ">			   
-				  <input  type="range"  id="positionx" min="-360" max="360" step="90"  value="0" oninput="posix2chnge()"  style="cursor:pointer;">
+				  <!-- <input  type="range"  id="positionx" min="-360" max="360" step="90"  value="0" oninput="posix2chnge()"  style="cursor:pointer;"> -->
                     <input type="text" id="fq-knob"  value="500"  readOnly=false oninput="timepdiv()">
 					<br/>
-					<label id="positnlabelx">Position-X</label>    
+					<!-- <label id="positnlabelx">Position-X</label>     -->
 					<br/>
-                   <label>Time(ms)/div</label>
+                   <label>Time (ms)/div</label>
 				</div>
 				
                 </div> 
