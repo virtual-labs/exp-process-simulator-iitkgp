@@ -13,8 +13,7 @@
 ### About the Experiment 
 **System description**
 
-The process control simulator utilizes integrated circuit operational amplifiers for specialized analog simulation. Its numerous variable interconnections, coupled with a selection of non-linear functions, enable in-depth exploration of both linear and non-linear process dynamics. Furthermore, it facilitates the implementation and analysis of proportional, integral, 
-and derivative control modes. 
+The process control simulator utilizes integrated circuit operational amplifiers for specialized analog simulation. Its numerous variable interconnections, coupled with a selection of non-linear functions, enable in-depth exploration of both linear and non-linear process dynamics. Furthermore, it facilitates the implementation and analysis of proportional, integral and derivative control modes. 
 
 <b >Functional Description</b>
 

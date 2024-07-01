@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. Consider a system with transfer function G(s) = (s + 4)/ (k s^2 + s + 4). The value of damping ratio will be 0.5 when the value of k is _____",
+      "question": "1. Consider a system with transfer function :<br/><img src='./images/pqtf2.jpg'><br/> The value of damping ratio will be 0.5 when the value of k is _____",
       "answers": {
         "a": "1/2",
         "b": "1/4",
@@ -100,7 +100,7 @@
       "answers": {
         "a": "Integration",
         "b": "Differentiation",
-        "c": "Both of the above",
+        "c": "Proportional action",
         "d": "None of the above"
       },
       "correctAnswer": "b",
@@ -113,7 +113,7 @@
         "a": "1",
         "b": "2",
         "c": "3",
-        "d": "None of the above"
+        "d": "4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"

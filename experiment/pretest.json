@@ -13,7 +13,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "2. The closed loop transfer function for a second order system is: T(s) = 4/ (s^2 + 4s + 4). Calculate the settling time for a 2 percent and 5 percent band.",
+      "question": "2. The closed loop transfer function for a second order system is:<br/><img src='./images/pqtf1.jpg'><br/> Calculate the settling time for a 2 percent and 5 percent band.",
       "answers": {
         "a": "5 s, 2.0 s",
         "b": "10 s, 2.0 s",
@@ -41,7 +41,7 @@
         "a": "Phase-lag controller",
         "b": "Phase-lead controller",
         "c": "PD controller",
-        "d": "None of the above"
+        "d": "P Controller"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -65,7 +65,7 @@
         "a": "PD controller is a high-pass filter",
         "b": "PD controller is a low-pass filter",
         "c": "PD controller is a notch filter",
-        "d": "None of the above"
+        "d": "PD controller is a band-pass filter"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -89,7 +89,7 @@
         "a": "Displacement",
         "b": "Flow rate",
         "c": "Temperature",
-        "d": "None of the above"
+        "d": "Viscocity"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -112,11 +112,12 @@
       "answers": {
         "a": "Lead compensator",
         "b": "Lag compensator",
-        "c": "Low pass Fillter",
-        "d": "None of the above"
+        "c": "Low pass fillter",
+        "d": "Notch filter"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
 }
+  
