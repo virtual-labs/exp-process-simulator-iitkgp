@@ -13,7 +13,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "2. The closed loop transfer function for a second order system is:<br/><img src='./images/pqtf1.jpg'><br/> Calculate the settling time for a 2 percent and 5 percent band.",
+      "question": "2. The closed loop transfer function for a second order system is<br/><img src='./images/pqtf1.jpg'><br/> Calculate the settling time for a 2 percent and 5 percent band.",
       "answers": {
         "a": "5 s, 2.0 s",
         "b": "10 s, 2.0 s",
