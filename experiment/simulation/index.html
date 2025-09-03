@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en"><!--html tag start-->
 <head>
-    <title>Study and operation of the Process Simulator setup</title>
+    <title>Study and Operation of the Process Simulator Setup</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -106,6 +106,8 @@ background-color: black;
   
   
 </head>
+
+
 <body><!--body tag start-->
     <div class="container p-3 my-3 text-primary text-center border"><!--First Container under body tag start-->
         <div class="row"><!--First row under 1st container start-->
@@ -136,7 +138,7 @@ background-color: black;
         
     </div><!--First Container under body tag end-->
     
-    	
+	
     <div class="container p-3 my-5 text-left border" ><!--3rd Container under body tag start-->
       <div class="row"><!--First row under 3rd container start-->
         <div class="col-md-1"></div><!--First col under 3rd container start& end-->
@@ -145,81 +147,111 @@ background-color: black;
               <div id="inst" style="display:block;height:200px;overflow-y:auto;text-align:justify">
 					<ol>
 					<b>P Control</b>
-                      <li>First make the wire connection properly through the connecting dots (blue dots) in the process simulator kit, below the oscilloscope section following the below instructions.<br/><br/>
-					  2-7, 8-9, 10-11, 12-13, 21-22, 23-24, 37-38, 39-40, 28-29, 25-26, 23-42, 44-42, 46-43, 46-25 and 32-35 for proportional control. 
-					  45-22, 45-27 connections can be done for showing output signal or deviation signal respectively in oscilloscope channel-2 alternatively.<br/>
-					   
-					   Switch on the plant by clicking on the toggle switch above it. The led will glow.</li></br>
+                      <li>First make the wire connection properly through the connecting dots (blue dots) in the process simulator kit below the oscilloscope controls section, following the below instructions.<br/>
+					  
+					  <ul>
+					  <li><b>Note:</b> Example: connection point 1 - connection point 2 (drag the wire from connection point 1 by pressing left mouse button and release on connection point 2).</li>
+					  <li>2-7, 8-9, 10-11, 12-13, 21-22, 23-24, 37-38, 39-40, 28-29, 25-26, 23-42, 44-42, 46-43, 46-25 and 32-35 for proportional control.</li> 
+						  			  
+					  <li>45-22, 45-27 connections can be done for showing output signal or deviation signal respectively in oscilloscope channel-2 alternatively.</li>
+					  <li>Connect 45-22 now.</li>
+					  <li><b>Note:</b> Any wire connection can be deleted by clicking on the connected wire if required.</li>
+					   </ul></li></br>
   
-					  <li>Click on 'Check Connection' button to check whether the connection is proper or not.
-					  Click on the 'Power' button to switch on the oscilloscope.</li><br/>
+					  <li><ul><li>Click on 'Check Connection' button to check whether the connection is proper or not. Switch on the plant by clicking on the toggle switch above it. The led will glow.</li>
+					  <li>Click on the 'Power' button to switch on the oscilloscope.</li></ul></li><br/>
 					 
 					 <li>Click on "Square" button (twice) to observe input signal. Apply amplitude to 5 V<sub>p-p</sub>, frequency 0.2 Hz. </li></br>
 					 
-					 <li>Apply 50 percent proportional band by rotating the 'proportional band' knob. </li><br/>
+					 <li><ul><li>Apply 50 percent proportional band by rotating the 'proportional band' knob. </li>
+					 <li><b>Note:</b> To rotate any knob put the mouse cursor on the knob handle (black line on the knob), a hand symbol will be showing. Press left mouse button, rotate clockwise to increase or anticlockwise to decrease values.</li>
+					 <li><b>Note:</b> If the desired value does not appear while rotating the knob in one attempt, try rotating it back and forth to reach the correct value.</li>
+					 </ul></li><br/>
 
-					 <li>Now click on 'Output' button to observe the output signal and enlarged signal plot for the particular proportional band.
-					 Channel-1 will show the input, Channel-2 will show the output and 'Dual' shows both the input and output signals. 
-					 In the plot (at the bottom of the page) zoom in the overshoot part of the curve by selecting that part. Enter the peak value and steady state value in respective input boxes. Click on
-					 'Calculate' button. Observe the steady state error and percentage overshoot. Click on 'Clear' button. Power off the oscilloscope.</li><br/>					 
+					 <li><ul><li>Now click on 'Output' button to observe the output signal and enlarged signal plot for the particular proportional band.</li>
+					 <li>Channel-1 will show the input, Channel-2 will show the output and 'Dual' shows both the input and output signals.</li> 
+					 <li>In the plot (at the bottom of the page during simulation) zoom in the overshoot part of the curve by selecting that part (hold the left mouse button and select the area).</li>
+					 <li>Enter the peak value and steady state value in respective input boxes.</li>
+					 <li>Click on 'Calculate' button. Observe the steady state error and percentage overshoot.</li>
+					 <li>Click on 'Clear' button. Power off the oscilloscope.</li></ul></li><br/>					 
 					 
-					 <li>Delete connection 45-22 by clicking on the connected wire and connect 45-27, click on 'Check Connection' button to check whether the connection is proper or not. 
-					 Power on the oscilloscope. Now follow steps 3-5 to observe the deviation signal. </li><br/>
+					 <li><ul><li>Delete connection 45-22 by clicking on the connected wire and connect 45-27.</li>
+					 <li>Click on 'Check Connection' button to check whether the connection is proper or not.</li> 
+					 <li>Power on the oscilloscope. Now follow steps 3-5 to observe the deviation signal.</li></ul></li><br/>					 
 					 
-					 
-					 <li>Click on 'Clear' button each time after one observation. Check output and deviation for 30,200,5 percent proportional band 
-					 following steps 1-6. Power off the oscilloscope.</li><br/>
+					 <li><ul><li>Click on 'Clear' button each time after one observation.</li>
+					 <li>Check output and deviation for 30,200,5 percent proportional band 
+					 following steps 1-6.</li>
+					 <li>Power off the oscilloscope.</li></ul></li><br/>
 					 
 					<br><br>
 					 </ol>
 					 <ol>
 					<b>PI Control</b>
-                      <li>First make the wire connection properly through the connecting dots (blue dots) in the process simulator kit, below the oscilloscope section following the below instructions.<br/><br/>
+                      <li>First make the wire connection properly through the connecting dots (blue dots) in the process simulator kit below the oscilloscope controls section, following the below instructions.<br/>
 					  
-					  2-7, 8-9, 10-11, 12-13, 21-22, 23-24, 37-38, 39-40, 28-29, 25-26, 23-42, 44-42, 46-43, 46-25 and 32-35, 30-31 for proportional integral control. 
-					  45-22, 45-27 connections can be done for showing output signal or deviation signal respectively in oscilloscope channel-2 alternatively.</li></br>
+					  <ul><li>2-7, 8-9, 10-11, 12-13, 21-22, 23-24, 37-38, 39-40, 28-29, 25-26, 23-42, 44-42, 46-43, 46-25 and 32-35, 30-31 for proportional integral control.</li> 
+					  
+					  <li>45-22, 45-27 connections can be done for showing output signal or deviation signal respectively in oscilloscope channel-2 alternatively.</li>
+					  <li>Connect 45-22 now.</li></ul></li></br>
   
-					  <li>Click on 'Check Connection' button to check whether the connection is proper or not. Click on the 'Power' button to switch on the oscilloscope.</li><br/>
+					  <li><ul><li>Click on 'Check Connection' button to check whether the connection is proper or not.</li>
+					  <li>Click on the 'Power' button to switch on the oscilloscope.</li></ul></li><br/>
 					 
 					 <li>Click on "Square" button (twice) to observe input signal. Apply amplitude to 5 V<sub>p-p</sub>, frequency 0.2 Hz. </li></br>
 					 
 					 <li>Apply 100 percent proportional band by rotating the 'proportional band' knob (this will be fixed) and apply integral time 2 by rotating the 'integral action' knob. </li><br/>
 
-					 <li>Now click on 'Output' button to observe the output signal and the enlarged signal plot for the particular integral time. Channel-1 will show the input,
-					 Channel-2 will show the output and 'Dual' shows both the input and output signals. 
-					 In the plot (at the bottom of the page) zoom in the overshoot part of the curve by selecting that part. Enter the peak value and steady state value (if overshoots are there) in respective input boxes. Click on
-					 'Calculate' button. Observe the steady state error and percentage overshoot. Click on 'Clear' button. Power off the oscilloscope.</li><br/>					 
+					 <li><ul><li>Now click on 'Output' button to observe the output signal and the enlarged signal plot for the particular integral time.</li>
+					 <li>Channel-1 will show the input, Channel-2 will show the output and 'Dual' shows both the input and output signals.</li> 
+					 <li>In the plot (at the bottom of the page during simulation) zoom in the overshoot part of the curve by selecting that part (hold the left mouse button and select the area).</li>
+					 <li>Enter the peak value and steady state value (if overshoots are there) in respective input boxes.</li>
+					 <li>Click on 'Calculate' button. Observe the steady state error and percentage overshoot.</li>
+					 <li>Click on 'Clear' button. Power off the oscilloscope.</li></ul></li><br/>					 
 					 
-					 <li>Delete connection 45-22 by clicking on the connected wire and connect 45-27, click on 'Check Connection' button to check whether the connection is proper or not. 
-					 Power on the oscilloscope. Now follow steps 3-5 to observe the deviation signal. </li><br/>
+					 <li><ul><li>Delete connection 45-22 by clicking on the connected wire and connect 45-27.</li>
+					 <li>Click on 'Check Connection' button to check whether the connection is proper or not.</li> 
+					 <li>Power on the oscilloscope. Now follow steps 3-5 to observe the deviation signal. </li></ul></li><br/>
 					 
-					 <li>Click on 'Clear' button each time after one observation. Check output and deviation by setting integral time to 5,10,25 following steps 1-6. Power off the oscilloscope.</li><br/>
+					 <li><ul><li>Click on 'Clear' button each time after one observation.</li>
+					 <li>Check output and deviation by setting integral time to 5,10,25 following steps 1-6.</li>
+					 <li>Power off the oscilloscope.</li></ul></li><br/>
 					
 					<br><br>
 					</ol>
 					<ol>					
 					<b>PID Control</b>
-                      <li>First make the wire connection properly through the connecting dots (blue dots) in the process simulator kit below the oscilloscope section following the below instructions.<br/><br/>
+                      <li>First make the wire connection properly through the connecting dots (blue dots) in the process simulator kit below the oscilloscope controls section, following the below instructions.<br/><br/>
 					  
-					  2-7, 8-9, 10-11, 12-13, 21-22, 23-24, 37-38, 39-40, 28-29, 25-26, 23-42, 44-42, 46-43, 46-25 and 32-35, 30-31, 33-36 for proportional integral derivative control. 45-22, 45-27 connections can be done for showing output signal
-					   or deviation signal respectively in oscilloscope channel-2 alternatively.
-					   </li></br>
+					  <ul><li>2-7, 8-9, 10-11, 12-13, 21-22, 23-24, 37-38, 39-40, 28-29, 25-26, 23-42, 44-42, 46-43, 46-25 and 32-35, 30-31, 33-36 for proportional integral derivative control.</li>
+					 				  
+					  <li>45-22, 45-27 connections can be done for showing output signal
+					   or deviation signal respectively in oscilloscope channel-2 alternatively.</li>
+					   <li>Connect 45-22 now.</li></ul></li></br>
   
-					  <li>Click on 'Check Connection' button to check whether the connection is proper or not. Click on the 'Power' button to switch on the oscilloscope.</li><br/>
+					  <li><ul><li>Click on 'Check Connection' button to check whether the connection is proper or not.</li>
+					  <li>Click on the 'Power' button to switch on the oscilloscope.</li></ul></li><br/>
 					 
 					 <li>Click on "Square" button (twice) to observe input signal. Apply amplitude to 5 V<sub>p-p</sub>, frequency 0.2 Hz. </li></br>
 					 
-					 <li>Apply 50 percent proportional band by rotating the 'proportional band' knob (this will be fixed) and apply integral time 2 by rotating the 'integral action' knob (this will be fixed) , apply derivative time to 2 by rotating the 'derivative action' knob. </li><br/>
+					 <li><ul><li>Apply 50 percent proportional band by rotating the 'proportional band' knob (this will be fixed).</li>
+					 <li>Apply integral time 2 by rotating the 'integral action' knob (this will be fixed).</li>
+					 <li>Apply derivative time to 2 by rotating the 'derivative action' knob. </li></ul></li><br/>
 
-					 <li>Now click on 'Output' button to observe the output signal and the enlarged signal plot for the particular derivative time.
-					 Channel-1 will show the input, Channel-2 will show the output and 'Dual' shows both the input and output signals. 
-					 In the plot (at the bottom of the page) zoom in the overshoot part of the curve by selecting that part. Enter the peak value and steady state value (if overshoots are there) in respective input boxes. Click on
-					 'Calculate' button. Observe the steady state error and percentage overshoot. Click on 'Clear' button. Power off the oscilloscope.</li><br/>					 
+					 <li><ul><li>Now click on 'Output' button to observe the output signal and the enlarged signal plot for the particular derivative time.</li>
+					 <li>Channel-1 will show the input, Channel-2 will show the output and 'Dual' shows both the input and output signals.</li> 
+					 <li>In the plot (at the bottom of the page during simulation) zoom in the overshoot part of the curve by selecting that part (hold the left mouse button and select the area).</li>
+					 <li>Enter the peak value and steady state value (if overshoots are there) in respective input boxes.</li>
+					 <li>Click on 'Calculate' button. Observe the steady state error and percentage overshoot.</li>
+					 <li>Click on 'Clear' button. Power off the oscilloscope.</li></ul></li><br/>					 
 					 
-					 <li>Delete connection 45-22 by clicking on the connected wire and connect 45-27, click on 'Check Connection' button to check whether the connection is proper or not. 
-					 Power on the oscilloscope. Now follow steps 3-5 to observe the deviation signal. </li><br/>
+					 <li><ul><li>Delete connection 45-22 by clicking on the connected wire and connect 45-27.</li>
+					 <li>Click on 'Check Connection' button to check whether the connection is proper or not.</li> 
+					 <li>Power on the oscilloscope. Now follow steps 3-5 to observe the deviation signal. </li></ul></li><br/>
 					
-					<li>Click on 'Clear' button each time after one observation. Check output and deviation by setting derivative time to 1 following steps 1-6. Power off the oscilloscope and the plant.</li><br/>
+					<li><ul><li>Click on 'Clear' button each time after one observation.</li>
+					<li>Check output and deviation by setting derivative time to 1 following steps 1-6.</li>
+					<li>Power off the oscilloscope and the plant.</li></ul></li><br/>
 					
 					<br><br>
 					
@@ -273,19 +305,19 @@ background-color: black;
 		
 		<br/><br/>
 				<span style="float:right;text-align:center">&nbsp; Steady-state Error (V)</span>
-				<input type="number" id="sserr" value="0" style="float:right;text-align:center"readOnly=readOnly><br/>
+				<input type="number" id="sserr" value="0" style="position:absolute;left:57%;text-align:center"readOnly=readOnly><br/>
 				
 				<br/>
 				<span style="float:right;text-align:center">&nbsp; Enter Peak Value (V)</span>
-				<input type="number" id="pv" value="0" style="float:right;text-align:center"><br/>
+				<input type="number" id="pv" value="0" style="position:absolute;left:57%;text-align:center"><br/>
 				
 				<br/>
 				<span style="float:right;text-align:center">&nbsp; Enter Steady State Value (V)</span>
-				<input type="number" id="sv" value="0" style="float:right;text-align:center"><br/>
+				<input type="number" id="sv" value="0" style="position:absolute;left:57%;text-align:center"><br/>
 				
 				<br/>
 				<span style="float:right;text-align:center">&nbsp; &percnt; Overshoot</span>
-				<input type="number" id="ov" value="0" style="float:right;text-align:center"readOnly=readOnly><br/>
+				<input type="number" id="ov" value="0" style="position:absolute;left:57%;text-align:center"readOnly=readOnly><br/>
 				
 				
 				<br/>
@@ -449,9 +481,9 @@ background-color: black;
 					<img class="img-fluid " id="led" src="./images/ledoff.png " />
 					<img class="img-fluid " id="sw" onclick="led()" src="./images/side_off.png " />
 					
-					<img class="img-fluid " id="mon" onclick="motoron()" src="./images/off.png " />
-					<img class="img-fluid " id="pon" onclick="planton()" src="./images/off.png " />
-					<img class="img-fluid " id="rr" onclick="rron()" src="./images/off.png " />
+					<img class="img-fluid " id="mon"  src="./images/off.png " />
+					<img class="img-fluid " id="pon"  src="./images/off.png " />
+					<img class="img-fluid " id="rr"  src="./images/off.png " />
 					<img class="img-fluid " id="rr2" onclick="rr2on()" src="./images/off.png " />
 					<img class="img-fluid " id="li1" onclick="li1on()" src="./images/off.png " />
 					<img class="img-fluid " id="li2" onclick="li2on()" src="./images/off.png " />
@@ -596,7 +628,7 @@ background-color: black;
 									
 					<button type="button" id="check"  class="btn btn-primary " >Check Connection</button>
 					
-				  <input type="number" id="controllerchk" min="1" value="1" max="6" style="visibility:hidden;" >
+				  <input type="number" id="controllerchk" min="0" value="0" max="6" style="visibility:hidden;" >
 					
 					<!--<button type="button" id="refresh" onclick="Refresh()" class="btn btn-primary" >Clear</button>-->
 			</div><!---end of 1st col under 1st row--->	
@@ -914,6 +946,14 @@ function onMouseMove3(event)
       main1();
 	  main2();
 	  main3();
+	  
+////CODE FOR ROBUSTNESS OF KNOB FUNCTIONS/////
+if (performance.navigation.type === 1) { // 1 = Reload
+      // Save a flag to indicate the redirect started
+      localStorage.setItem("redirectFromReload", "true");
+      // Redirect to a.html
+      window.location.href = "index.html";
+    }
 	 
 </script>	
 </body><!--body tag end-->

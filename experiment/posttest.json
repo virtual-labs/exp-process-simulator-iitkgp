@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. Consider a system with transfer function<br/><img src='./images/pqtf2.jpg'><br/> The value of damping ratio will be 0.5 when the value of k is _____",
+      "question": "1. Consider a system with transfer function <br/><img src='./images/pqtf2.jpg'><br/> The value of damping ratio will be 0.5 when the value of k is _____",
       "answers": {
         "a": "1/2",
         "b": "1/4",

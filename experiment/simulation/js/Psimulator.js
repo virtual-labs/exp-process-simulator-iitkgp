@@ -263,13 +263,16 @@ function mainswt() {
 }
 
 function led(){
-	if(document.getElementById('sw').src.match('./images/side_off.png')){
+	if(document.getElementById('sw').src.match('./images/side_off.png') && (document.getElementById('controllerchk').value == 1 || document.getElementById('controllerchk').value == 2 || document.getElementById('controllerchk').value == 3 || document.getElementById('controllerchk').value == 4 || document.getElementById('controllerchk').value == 5 || document.getElementById('controllerchk').value == 6)){
 		document.getElementById('sw').src = "./images/side_on.png";
 		document.getElementById('led').src = "./images/ledon.png";
+			document.getElementById("onff").disabled = false;
+		
 	}
-	else if(document.getElementById('sw').src.match('./images/side_on.png')){
+	 else if(document.getElementById('sw').src.match('./images/side_on.png')){
 		document.getElementById('sw').src = "./images/side_off.png";
 		document.getElementById('led').src = "./images/ledoff.png";
+		document.getElementById("onff").disabled = true;
 	}
 	
 }

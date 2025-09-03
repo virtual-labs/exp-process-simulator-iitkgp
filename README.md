@@ -7,7 +7,7 @@
 <b>Discipline | <b> Electrical Engineering 
 :--|:--|
 <b> Lab | <b> **Control and Instrumentation Lab**
-<b> Experiment|     <b> **Study and operation of the Process Simulator setup**
+<b> Experiment|     <b> **Study and Operation of the Process Simulator Setup**
 
 
 ### About the Experiment 
