@@ -58,7 +58,7 @@ jsPlumb.ready(function () {
 	// for all live red connection//
         endpoint = {
             anchors: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth: 8, stroke: "#C50806" },
+            connectorStyle: { strokeWidth: 5, stroke: "#C50806" },
             endpointsOnTop: true,
             isSource: true,
             maxConnections: 100,
@@ -78,7 +78,7 @@ jsPlumb.ready(function () {
 
 	endpoint_ground = {
             anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth: 10, stroke: "black" },
+            connectorStyle: { strokeWidth: 5, stroke: "black" },
             endpointsOnTop: true,
             isSource: true,
             maxConnections: 10,
@@ -113,9 +113,11 @@ jsPlumb.ready(function () {
     instance = jsPlumb.getInstance({
         DragOptions: { cursor: 'wait', zIndex: 20 },
         Endpoint: [ "Image", { url: "./images/littledot.png" } ],
-        Connector: [ "Bezier", { curviness:-80 } ],
+        Connector: [ "Bezier", { curviness:45 } ],
         Container: "canvas"
     });
+	
+	
 	
 	
 	
@@ -159,8 +161,8 @@ jsPlumb.ready(function () {
             e22= prepare("bd22"),
 			e23= prepare("bd23"),
 			e24= prepare("bd24"),
-			e25 = prepare("bd25"),            
-            e26 = prepare("bd26"),
+			e25 = prepare_ground("bd25"),            
+            e26 = prepare_ground("bd26"),
 			e27 = prepare("bd27"),
             e28 = prepare("bd28"),
 			e29 = prepare("bd29"),
@@ -182,12 +184,37 @@ jsPlumb.ready(function () {
 			e45 = prepare("bd45");
 			e46 = prepare_ground("bd46");
 			
+			instance.bind("connection", function (info) {
+        const s = info.sourceId;
+        const t = info.targetId;
+
+        // Apply custom curviness if it's a special case
+        if ((s === "bd45" && t === "bd22") || (s === "bd22" && t === "bd45")) {
+            info.connection.setConnector(["Bezier", { curviness: -90 }]);
+        }
+		 
+    });
+			
             // instance.connect({ source: e5, target: e6 });
+			
+			///NEW ADDITION TO DISPLAY CONNECTION POINT NUMBERS DURING DELEETE
+		
+		var name1, name2;
 			 
 			 //delete clicked connection
       instance.bind("click", function (conn, originalEvent) {
 		  
-           if ( confirm("Delete connection ?")) {////for clicking on a connection
+		  ///NEW ADDED FOR LOOP TO DISPLAY ENDPOINT NAMES DURING DELETE CONNECTION
+		 for(var cpoint =1; cpoint<=46; cpoint++){
+			 if(conn.sourceId=='bd'+cpoint){
+				 name1 = cpoint;
+			 }
+			 if(conn.targetId=='bd'+cpoint){ 
+		  name2= cpoint;
+		 }
+		 } 
+		  
+           if ( confirm('Delete connection from'+' ' + name1 +' '+ 'to' + ' '+ name2 + '?')) {////for clicking on a connection
                instance.deleteConnection(conn);			  
 			         }
        }); 
@@ -549,10 +576,18 @@ jsPlumb.ready(function () {
                 "source": "bd46",
                 "target": "bd25"
             },
+			{
+                "source": "bd25",
+                "target": "bd46"
+            },
 
             {
                 "source": "bd46",
                 "target": "bd43"
+            },
+			{
+                "source": "bd43",
+                "target": "bd46"
             },
 			
 			{
@@ -989,30 +1024,30 @@ jsPlumb.ready(function () {
 		
 			///output signal	
 		///P-Control
-        if (is_connected_46_25 && is_connected_46_43 && is_connected_44_42 && is_connected_23_42 && is_connected_25_26 && is_connected_28_29 && is_connected_39_40 && is_connected_37_38 && is_connected_23_24 && is_connected_21_22 && is_connected_12_13 && is_connected_10_11 && is_connected_8_9 && is_connected_2_7 && is_connected_45_22 && is_connected_32_35 &&!is_connected_30_31 &&!is_connected_33_36 && !unallowed_connection_present && document.getElementById('led').src.match('./images/ledon.png')) {
+        if (is_connected_46_25 && is_connected_46_43 && is_connected_44_42 && is_connected_23_42 && is_connected_25_26 && is_connected_28_29 && is_connected_39_40 && is_connected_37_38 && is_connected_23_24 && is_connected_21_22 && is_connected_12_13 && is_connected_10_11 && is_connected_8_9 && is_connected_2_7 && is_connected_45_22 && is_connected_32_35 &&!is_connected_30_31 &&!is_connected_33_36 && !unallowed_connection_present) {
 			            
 			document.getElementById('controllerchk').value = 1;
 			alert('Right Connection\nP-Control');
-			document.getElementById("onff").disabled = false;
+			//document.getElementById("onff").disabled = false;
 			document. getElementById('sv').removeAttribute('readonly');
 			document. getElementById('pv').removeAttribute('readonly');
            }
 		   ///P-I Control
-	else if (is_connected_46_25 && is_connected_46_43 && is_connected_44_42 && is_connected_23_42 && is_connected_25_26 && is_connected_28_29 && is_connected_39_40 && is_connected_37_38 && is_connected_23_24 && is_connected_21_22 && is_connected_12_13 && is_connected_10_11 && is_connected_8_9 && is_connected_2_7 && is_connected_45_22 &&  is_connected_32_35 && is_connected_30_31 &&!is_connected_33_36 &&!unallowed_connection_present && document.getElementById('led').src.match('./images/ledon.png') ) {
+	else if (is_connected_46_25 && is_connected_46_43 && is_connected_44_42 && is_connected_23_42 && is_connected_25_26 && is_connected_28_29 && is_connected_39_40 && is_connected_37_38 && is_connected_23_24 && is_connected_21_22 && is_connected_12_13 && is_connected_10_11 && is_connected_8_9 && is_connected_2_7 && is_connected_45_22 &&  is_connected_32_35 && is_connected_30_31 &&!is_connected_33_36 &&!unallowed_connection_present ) {
 		       
 			   document.getElementById('controllerchk').value = 2;
 			   alert('Right Connection\nP-I Control');
-               document.getElementById("onff").disabled = false; 
+              // document.getElementById("onff").disabled = false; 
 			   document. getElementById('sv').removeAttribute('readonly');
 				document. getElementById('pv').removeAttribute('readonly');
             }  
 			
 			///P-I-D Control
-			else if (is_connected_46_25 && is_connected_46_43 && is_connected_44_42 && is_connected_23_42 && is_connected_25_26 && is_connected_28_29 && is_connected_39_40 && is_connected_37_38 && is_connected_23_24 && is_connected_21_22 && is_connected_12_13 && is_connected_10_11 && is_connected_8_9 && is_connected_2_7 && is_connected_45_22 && is_connected_32_35 &&  is_connected_30_31 &&  is_connected_33_36 && !unallowed_connection_present && document.getElementById('led').src.match('./images/ledon.png')) {
+			else if (is_connected_46_25 && is_connected_46_43 && is_connected_44_42 && is_connected_23_42 && is_connected_25_26 && is_connected_28_29 && is_connected_39_40 && is_connected_37_38 && is_connected_23_24 && is_connected_21_22 && is_connected_12_13 && is_connected_10_11 && is_connected_8_9 && is_connected_2_7 && is_connected_45_22 && is_connected_32_35 &&  is_connected_30_31 &&  is_connected_33_36 && !unallowed_connection_present) {
 		       
 			   document.getElementById('controllerchk').value = 3;
 			   alert('Right Connection\nP-I-D Control');
-               document.getElementById("onff").disabled = false;
+               //document.getElementById("onff").disabled = false;
 				document. getElementById('sv').removeAttribute('readonly');
 				document. getElementById('pv').removeAttribute('readonly');			   
             }
@@ -1020,31 +1055,31 @@ jsPlumb.ready(function () {
 		///deviation signal	
 			
 		///P-Control
-    else if (is_connected_46_25 && is_connected_46_43 && is_connected_44_42 && is_connected_23_42 && is_connected_25_26 && is_connected_28_29 && is_connected_39_40 && is_connected_37_38 && is_connected_23_24 && is_connected_21_22 && is_connected_12_13 && is_connected_10_11 && is_connected_8_9 && is_connected_2_7 && is_connected_45_27 && is_connected_32_35 &&!is_connected_30_31 &&!is_connected_33_36 && !unallowed_connection_present && document.getElementById('led').src.match('./images/ledon.png')) {
+    else if (is_connected_46_25 && is_connected_46_43 && is_connected_44_42 && is_connected_23_42 && is_connected_25_26 && is_connected_28_29 && is_connected_39_40 && is_connected_37_38 && is_connected_23_24 && is_connected_21_22 && is_connected_12_13 && is_connected_10_11 && is_connected_8_9 && is_connected_2_7 && is_connected_45_27 && is_connected_32_35 &&!is_connected_30_31 &&!is_connected_33_36 && !unallowed_connection_present) {
 			            
 			document.getElementById('controllerchk').value = 4;
 			alert('Right Connection\nP-Control');
-			document.getElementById("onff").disabled = false;
+			//document.getElementById("onff").disabled = false;
 			document. getElementById('sv').setAttribute('readonly','true');
 			document. getElementById('pv').setAttribute('readonly','true');
 			
            }
 		   ///P-I Control
-	else if (is_connected_46_25 && is_connected_46_43 && is_connected_44_42 && is_connected_23_42 && is_connected_25_26 && is_connected_28_29 && is_connected_39_40 && is_connected_37_38 && is_connected_23_24 && is_connected_21_22 && is_connected_12_13 && is_connected_10_11 && is_connected_8_9 && is_connected_2_7 && is_connected_45_27 &&  is_connected_32_35 && is_connected_30_31 &&!is_connected_33_36 &&!unallowed_connection_present && document.getElementById('led').src.match('./images/ledon.png')) {
+	else if (is_connected_46_25 && is_connected_46_43 && is_connected_44_42 && is_connected_23_42 && is_connected_25_26 && is_connected_28_29 && is_connected_39_40 && is_connected_37_38 && is_connected_23_24 && is_connected_21_22 && is_connected_12_13 && is_connected_10_11 && is_connected_8_9 && is_connected_2_7 && is_connected_45_27 &&  is_connected_32_35 && is_connected_30_31 &&!is_connected_33_36 &&!unallowed_connection_present) {
 		       
 			   document.getElementById('controllerchk').value = 5;
 			   alert('Right Connection\nP-I Control');
-               document.getElementById("onff").disabled = false; 
+               //document.getElementById("onff").disabled = false; 
 			   document. getElementById('sv').setAttribute('readonly','true');
 			document. getElementById('pv').setAttribute('readonly','true');
             }  
 			
 			///P-I-D Control
-			else if (is_connected_46_25 && is_connected_46_43 && is_connected_44_42 && is_connected_23_42 && is_connected_25_26 && is_connected_28_29 && is_connected_39_40 && is_connected_37_38 && is_connected_23_24 && is_connected_21_22 && is_connected_12_13 && is_connected_10_11 && is_connected_8_9 && is_connected_2_7 && is_connected_45_27 && is_connected_32_35 &&  is_connected_30_31 &&  is_connected_33_36 && !unallowed_connection_present && document.getElementById('led').src.match('./images/ledon.png')) {
+			else if (is_connected_46_25 && is_connected_46_43 && is_connected_44_42 && is_connected_23_42 && is_connected_25_26 && is_connected_28_29 && is_connected_39_40 && is_connected_37_38 && is_connected_23_24 && is_connected_21_22 && is_connected_12_13 && is_connected_10_11 && is_connected_8_9 && is_connected_2_7 && is_connected_45_27 && is_connected_32_35 &&  is_connected_30_31 &&  is_connected_33_36 && !unallowed_connection_present) {
 		       
 			   document.getElementById('controllerchk').value = 6;
 			   alert('Right Connection\nP-I-D Control');
-               document.getElementById("onff").disabled = false; 
+               //document.getElementById("onff").disabled = false; 
 			   document. getElementById('sv').setAttribute('readonly','true');
 			document. getElementById('pv').setAttribute('readonly','true');
             }	
