@@ -1,0 +1,122 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. The type of heat transfer process, occurs between a solid surface and a fluid exposed to it is ________",
+      "answers": {
+        "a": "Convection",
+        "b": "Radiation",
+        "c": "Conduction",
+        "d": "None of the above"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. The closed loop transfer function for a second order system is <br/><img src='./images/pqtf1.jpg'><br/> Calculate the settling time for a 2 percent and 5 percent band.",
+      "answers": {
+        "a": "5 s, 2.0 s",
+        "b": "10 s, 2.0 s",
+        "c": "2.0 s,1.5 s",
+        "d": "10 s,1.5 s"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. If it was possible for a proportional controller to have a true zero percent proportional band, the controller gain would have to be ____",
+      "answers": {
+        "a": "Unity",
+        "b": "Zero",
+        "c": "Infinite",
+        "d": "100"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    
+    {
+      "question": "4. The low-pass filter is also known as a _____",
+      "answers": {
+        "a": "Phase-lag controller",
+        "b": "Phase-lead controller",
+        "c": "PD controller",
+        "d": "P Controller"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+		
+	{
+      "question": "5. The frequency at which maximum amplitude ratio is attained is called the __________ frequency.",
+      "answers": {
+        "a": "Corner",
+        "b": "Resonant",
+        "c": "Cross-over",
+        "d": "Natural"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "6. Which one of the following statements is true ?",
+      "answers": {
+        "a": "PD controller is a high-pass filter",
+        "b": "PD controller is a low-pass filter",
+        "c": "PD controller is a notch filter",
+        "d": "PD controller is a band-pass filter"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "7. The two key variables in a thermal process are ______ .",
+      "answers": {
+        "a": "Temperature T and heat stored Q",
+        "b": "Temperature T and thermal resistance R",
+        "c": "Thermal resistance R and thermal capacitance C",
+        "d": "None of the above"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "8. The nozzle–flapper amplifier converts  ______  into a pressure signal.",
+      "answers": {
+        "a": "Displacement",
+        "b": "Flow rate",
+        "c": "Temperature",
+        "d": "Viscocity"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "9. In case of PID controller which of the following statements is true ?",
+      "answers": {
+        "a": "PI control action occurs at the low-frequency region",
+        "b": "PI control action occurs at the high-frequency region",
+        "c": "PD control action occurs at the low-frequency region",
+        "d": "None of the above"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "10. The PD controller is a simplified version of the ______.",
+      "answers": {
+        "a": "Lead compensator",
+        "b": "Lag compensator",
+        "c": "Low pass fillter",
+        "d": "Notch filter"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}
