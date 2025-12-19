@@ -1,24 +1,43 @@
 ## Introduction
 
+<div align="center">
+<img src="experiment/images/iitkgp.png" width="10%">
+</div>
 
-<b>Discipline | <b>Fill your discipline name here
+<b>Discipline | <b> Electrical Engineering 
 :--|:--|
-<b> Lab | <b> Fill your lab name here
-<b> Experiment|     <b> Fill your experiment name and number here
+<b> Lab | <b> **Control and Instrumentation Lab**
+<b> Experiment|     <b> **Study and Operation of the Process Simulator Setup**
+
 
 ### About the Experiment 
+**System description**
 
-Fill a brief description of this experiment here
+The process control simulator utilizes integrated circuit operational amplifiers for specialized analog simulation. Its numerous variable interconnections, coupled with a selection of non-linear functions, enable in-depth exploration of both linear and non-linear process dynamics. Furthermore, it facilitates the implementation and analysis of proportional, integral and derivative control modes. 
 
-<b>Name of Developer | <b> Fill the name of experiment owner here 
+<b >Functional Description</b>
+
+Fig. 1 shows the panel layout. 
+A power on-off switch and an indicator lamp are mounted on the left hand side of the case. Range of all input and output signals is &plusmn; 10 V.  
+
+
+<div align="center">
+<img class="img-fluid"  src="experiment/images/conn.png" alt="">
+
+<b>Fig. 1. Connection diagram for the Process Control Simulator</b>
+</div>
+
+
+<b>Subject matter expertise | <b> **Prof. Alok Kanti Deb**
 :--|:--|
-<b> Institute | <b>  
-<b> Email id|     <b>  
-<b> Department |  
+<b> Institute | <b>  **Indian Institute of Technology Kharagpur**
+<b> Email id|     <b>  **alokkanti@ee.iitkgp.ac.in**
+<b> Department |  **Department of Electrical Engineering**
+<b>Webpage| <b> http://www.iitkgp.ac.in/department/EE/faculty/ee-alokkanti
 
 ### Contributors List
 
-SrNo | Name | Faculty or Student | Department| Institute | Email id
+SrNo | Name | VLabs Developer or Integration Engineer | Designation | Department| Institute
 :--|:--|:--|:--|:--|:--|
-1 | . | . | . | . | .
-2 | . | . | . | . | .
+1 | **Piyali Chattopadhyay** | Developer | Project Scientist | Department of Electrical Engineering | IIT Kharagpur | 
+2 | **Subhasis Mahata** | Integration Engineer | Senior Project Scientist | Department of Mechanical Engineering | IIT Kharagpur |

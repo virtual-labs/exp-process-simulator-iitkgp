@@ -2,37 +2,120 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. Consider a system with transfer function <br/><img src='./images/pqtf2.jpg'><br/> The value of damping ratio will be 0.5 when the value of k is _____",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "1/2",
+        "b": "1/4",
+        "c": "8",
+        "d": "4"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. The time constant of a first order process with resistance R and capacitance C is",
+      "answers": {
+        "a": "RC",
+        "b": "R+C",
+        "c": "R-C",
+        "d": "1/RC"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "3. Which of the following controllers has maximum offset ?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "P controller",
+        "b": "PI controller",
+        "c": "PD controller",
+        "d": "PID controller"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. The gas temperatures at any two given instants are the same. The process is _____.",
+      "answers": {
+        "a": "Isothermal",
+        "b": "Isobaric",
+        "c": "Isobaric",
+        "d": "Isovolumetric"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. What is the relationship between the steady-state error, gain and the tendency of oscillations when the controller is supposed to be under the proportional action?",
+      "answers": {
+        "a": "Steady-state error increases with an increase in gain and oscillation tendency",
+        "b": "Steady-state error decreases with the decrease in gain and oscillation tendency",
+		"c": "Steady-state error decreases with an increase in gain and oscillation tendency",
+        "d": "Steady-state error increases with the decrease in gain and oscillation tendency"
+        
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. The input to a controller is",
+      "answers": {
+        "a": "Sensed Signal",
+        "b": "Error Signal",
+        "c": "Desired variable value",
+        "d": "Signal of fixed amplitude not dependent on desired variable value"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+   
+    {
+      "question": "7. Proportional band of the controller is expressed as",
+      "answers": {
+        "a": "Gain",
+        "b": "Ratio",
+        "c": "Percentage",
+        "d": "Range of control variables"
+        
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }, 
+    
+	
+	{
+      "question": "8. Most thermal processes in process control systems do not involve _____ heat transfer.",
+      "answers": {
+        "a": "Conduction",
+        "b": "Radiation",
+        "c": "Convection",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "9. In case of a PID controller, the _____ process involved may cause serious noise problems",
+      "answers": {
+        "a": "Integration",
+        "b": "Differentiation",
+        "c": "Proportional action",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "10. The use of a lag–lead compensator raises the order of the system by ______ unless cancellation occurs between zero(s) of the lag–lead compensator and pole(s) of the uncompensated open-loop transfer function.",
+      "answers": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
